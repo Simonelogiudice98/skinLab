@@ -1,7 +1,8 @@
 import styles from '../../assets/commonStyles/commonStyles.module.scss';
 import { SectionTitle } from "../../components/sectionTitle/sectionTitle";
 
-export function AboutSection() {
+
+const AboutSection: React.FC = () => {
   return (
     <section id="about" className={styles.section}>
       <div className={styles.container}>
@@ -37,3 +38,4 @@ export function AboutSection() {
     </section>
   );
 }
+export default AboutSection

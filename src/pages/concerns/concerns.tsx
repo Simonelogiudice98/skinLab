@@ -6,7 +6,7 @@ type Props = {
   concerns: Concern[];
 };
 
-export function ConcernsSection({ concerns }: Props) {
+const ConcernsSection: React.FC<Props> = ({ concerns }) => {
   return (
     <section id="concerns" className={styles.section}>
       <div className={styles.container}>
@@ -37,3 +37,5 @@ export function ConcernsSection({ concerns }: Props) {
     </section>
   );
 }
+
+export default ConcernsSection

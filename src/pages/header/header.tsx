@@ -1,17 +1,13 @@
 import styles from '../../assets/commonStyles/commonStyles.module.scss';
 import { WHATSAPP_LINK } from '../../utils/utils';
+import logo from "../../assets/img/skinLab_logo_only.png";
 
 const Header: React.FC = () => {
 
   return (
           <nav className={styles.nav}>
         <div className={styles.navInner}>
-          <a className={styles.brand} href="#top" aria-label="SkinLab Medical">
-            {/* Se vuoi: sostituisci con un <img src={logo} /> quando avrai il PNG/SVG */}
-            <span className={styles.brandWordmark}>SkinLab</span>
-            <span className={styles.brandSmall}>MEDICAL</span>
-          </a>
-
+          <img src={logo} alt="logo" style={{height: "60px", width: "auto", display: "block"}} />
           <div className={styles.navLinks}>
             <a href="#about">About</a>
             <a href="#concerns">Skin Concerns</a>

@@ -3,12 +3,11 @@ import { SectionTitle } from '../../components/sectionTitle/sectionTitle';
 import type { Treatment } from '../../interfaces/skinLab.types';
 import { WHATSAPP_LINK } from '../../utils/utils';
 
-
 type Props = {
   treatments: Treatment[];
 };
 
-export function TreatmentsSection({ treatments}: Props) {
+const TreatmentsSection: React.FC<Props> = ({ treatments }) => {
   return (
     <section id="treatments" className={styles.section}>
       <div className={styles.container}>
@@ -55,3 +54,4 @@ export function TreatmentsSection({ treatments}: Props) {
     </section>
   );
 }
+export default TreatmentsSection
