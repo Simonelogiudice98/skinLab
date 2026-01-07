@@ -77,26 +77,6 @@
   box-shadow: 0 24px 70px rgba(42, 42, 42, 0.1);
 }
 
-.grid3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-
-  @media (max-width: 980px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.grid2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-
-  @media (max-width: 980px) {
-    grid-template-columns: 1fr;
-  }
-}
-
 .card {
   border-radius: 18px;
   border: 1px solid rgba(42, 42, 42, 0.12);
@@ -108,19 +88,6 @@
   margin: 0;
   font-size: 18px;
   letter-spacing: -0.2px;
-}
-
-.cardText {
-  margin: 10px 0 0;
-  color: rgba(42, 42, 42, 0.72);
-  line-height: 1.7;
-  font-size: 14px;
-}
-
-.cardDivider {
-  height: 1px;
-  background: rgba(42, 42, 42, 0.12);
-  margin: 14px 0;
 }
 
 .smallLabel {
@@ -143,23 +110,6 @@
   }
 }
 
-.treatTop {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.priceFrom {
-  font-weight: 900;
-  color: rgba(42, 42, 42, 0.72);
-  border: 1px solid rgba(42, 42, 42, 0.14);
-  background: rgba(227, 226, 221, 0.7);
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-}
-
 .btnPrimary {
   text-decoration: none;
   color: #1e1e1e;
@@ -174,31 +124,4 @@
   &:hover {
     filter: brightness(1.02);
   }
-}
-
-.ctaRow {
-  margin-top: 18px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(42, 42, 42, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-
-  @media (max-width: 760px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.ctaTitle {
-  font-weight: 900;
-  font-size: 18px;
-}
-
-.ctaSub {
-  margin-top: 4px;
-  color: rgba(42, 42, 42, 0.72);
-  line-height: 1.6;
-  font-size: 14px;
 }

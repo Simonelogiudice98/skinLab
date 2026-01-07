@@ -8,6 +8,12 @@
     grid-template-columns: 1fr;
   }
 }
+
+.textCheck{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .textBlock {
   p {
     margin: 0 0 12px;
@@ -31,3 +37,41 @@
   font-weight: 700;
   color: rgba(42, 42, 42, 0.85);
 }
+
+.sideCol {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.aboutMedia {
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 18px;
+  border: 1px solid rgba(42, 42, 42, 0.12);
+  background: rgba(242, 241, 237, 0.6);
+
+  aspect-ratio: 4 / 3; 
+}
+
+.aboutMediaImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.aboutMediaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 242, 236, 0.10) 0%,
+    rgba(245, 242, 236, 0.35) 100%
+  );
+}
+
+.aboutMediaOverlay { background: rgba(245, 242, 236, 0.12); }

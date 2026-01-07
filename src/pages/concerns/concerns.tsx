@@ -1,9 +1,18 @@
 import type { Concern } from "../../interfaces/skinLab.types";
-import styles from '../../assets/commonStyles/commonStyles.module.scss';
+import styles from "../../assets/commonStyles/commonStyles.module.scss";
+import './concerns.scss';
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
+
+import { Sun, Layers, Shield, Sparkles } from "lucide-react";
 
 type Props = {
   concerns: Concern[];
+};
+
+const iconByTitle: Record<string, React.ReactNode> = {
+  Hyperpigmentation: <Sun size={20} strokeWidth={1.6} />,
+  "Acne Scarring": <Layers size={20} strokeWidth={1.6} />,
+  Rosacea: <Shield size={20} strokeWidth={1.6} />,
 };
 
 const ConcernsSection: React.FC<Props> = ({ concerns }) => {
@@ -16,16 +25,22 @@ const ConcernsSection: React.FC<Props> = ({ concerns }) => {
           subtitle="Targeted treatments for common concerns, with a structured plan built around your skin."
         />
 
-        <div className={styles.grid3}>
+        <div className="grid1">
           {concerns.map((c) => (
             <article key={c.title} className={styles.card}>
-              <h3 className={styles.h3}>{c.title}</h3>
-              <p className={styles.cardText}>{c.description}</p>
+              <div className="cardHead">
+                <div className="iconBadge" aria-hidden="true">
+                  {iconByTitle[c.title] ?? <Sparkles size={20} strokeWidth={1.6} />}
+                </div>
+                <h3 className="h3">{c.title}</h3>
+              </div>
 
-              <div className={styles.cardDivider} />
+              <p className="cardText">{c.description}</p>
 
-              <div className={styles.smallLabel}>Recommended treatments</div>
-              <ul className={styles.list}>
+              <div className="cardDivider" />
+
+              <div className="smallLabel">Recommended treatments</div>
+              <ul className="list">
                 {c.treatments.map((t) => (
                   <li key={t}>{t}</li>
                 ))}
@@ -36,6 +51,6 @@ const ConcernsSection: React.FC<Props> = ({ concerns }) => {
       </div>
     </section>
   );
-}
+};
 
-export default ConcernsSection
+export default ConcernsSection;

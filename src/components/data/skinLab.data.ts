@@ -1,4 +1,6 @@
 import type { Concern, Treatment } from "../../interfaces/skinLab.types.ts";
+import peelsImg from "../../assets/images/treatments/peels.jpg";
+import microImg from "../../assets/images/treatments/microneedling.jpg";
 
 export const concerns: Concern[] = [
   {
@@ -28,6 +30,7 @@ export const treatments: Treatment[] = [
     description:
       "A customised blend of medical-grade acids designed to brighten, refine and resurface the skin.",
     bullets: ["Hyperpigmentation", "Acne scarring", "Rosacea-prone skin", "Dullness & texture"],
+    image: peelsImg,
   },
   {
     title: "Microneedling",
@@ -35,5 +38,6 @@ export const treatments: Treatment[] = [
     description:
       "A collagen-stimulating treatment using fine medical needles to trigger regeneration and repair.",
     bullets: ["Acne scarring", "Pigmentation", "Fine lines", "Enlarged pores"],
+    image: microImg,
   },
 ];

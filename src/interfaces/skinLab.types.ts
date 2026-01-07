@@ -6,6 +6,7 @@ export interface Concern  {
 
 export interface Treatment {
   title: string;
+  image?: string;
   priceFrom: string;
   description: string;
   bullets: string[];

@@ -1,9 +1,11 @@
-import styles from '../../assets/commonStyles/commonStyles.module.scss';
-import SectionTitle from '../../components/sectionTitle/sectionTitle';
-import type { Treatment } from '../../interfaces/skinLab.types';
-import { WHATSAPP_LINK } from '../../utils/utils';
+import styles from "../../assets/commonStyles/commonStyles.module.scss";
+import SectionTitle from "../../components/sectionTitle/sectionTitle";
+import { WHATSAPP_LINK } from "../../utils/utils";
+import { SmartImage } from "../../components/smartImage/smartImage";
+import './treatments.scss';
+import type { Treatment } from "../../interfaces/skinLab.types";
 
-type Props = {
+interface Props  {
   treatments: Treatment[];
 };
 
@@ -18,15 +20,26 @@ const TreatmentsSection: React.FC<Props> = ({ treatments }) => {
             subtitle="Every plan combines in-clinic treatments with curated homecare for long-term transformation."
           />
 
-          <div className={styles.grid2}>
+          <div className="grid2">
             {treatments.map((t) => (
               <article key={t.title} className={styles.card}>
-                <div className={styles.treatTop}>
+                {t.image ? (
+                  <div className="cardMedia" aria-hidden="true">
+                    <SmartImage
+                      src={t.image}
+                      alt=""
+                      className="cardMediaImg"
+                    />
+                    <div className="cardMediaOverlay" />
+                  </div>
+                ) : null}
+
+                <div className="treatTop">
                   <h3 className={styles.h3}>{t.title}</h3>
-                  <span className={styles.priceFrom}>{t.priceFrom}</span>
+                  <span className="priceFrom">{t.priceFrom}</span>
                 </div>
 
-                <p className={styles.cardText}>{t.description}</p>
+                <p className="cardText">{t.description}</p>
 
                 <ul className={styles.list}>
                   {t.bullets.map((b) => (
@@ -37,15 +50,23 @@ const TreatmentsSection: React.FC<Props> = ({ treatments }) => {
             ))}
           </div>
 
-          <div className={styles.ctaRow}>
+          <div className="ctaRow">
             <div>
-              <div className={styles.ctaTitle}>Ready to transform your skin?</div>
-              <div className={styles.ctaSub}>
-                Start with a personalised consultation — professional, evidence-based, tailored to you.
+              <div className="ctaTitle">
+                Ready to transform your skin?
+              </div>
+              <div className="ctaSub">
+                Start with a personalised consultation — professional,
+                evidence-based, tailored to you.
               </div>
             </div>
 
-            <a className={styles.btnPrimary} href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+            <a
+              className={styles.btnPrimary}
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noreferrer"
+            >
               Book Your Consultation →
             </a>
           </div>
@@ -53,5 +74,6 @@ const TreatmentsSection: React.FC<Props> = ({ treatments }) => {
       </div>
     </section>
   );
-}
-export default TreatmentsSection
+};
+
+export default TreatmentsSection;

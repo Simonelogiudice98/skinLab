@@ -1,0 +1,90 @@
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  @media (max-width: 980px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cardMedia {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(42, 42, 42, 0.10);
+  background: rgba(242, 241, 237, 0.6);
+isolation: isolate;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 14px;
+}
+
+.cardMediaImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.cardMediaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 242, 236, 0.06) 0%,
+    rgba(245, 242, 236, 0.22) 100%
+  );
+}
+
+.treatTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.priceFrom {
+  font-weight: 900;
+  color: rgba(42, 42, 42, 0.72);
+  border: 1px solid rgba(42, 42, 42, 0.14);
+  background: rgba(227, 226, 221, 0.7);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.cardText {
+  margin: 10px 0 0;
+  color: rgba(42, 42, 42, 0.72);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.ctaRow {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(42, 42, 42, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.ctaTitle {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.ctaSub {
+  margin-top: 4px;
+  color: rgba(42, 42, 42, 0.72);
+  line-height: 1.6;
+  font-size: 14px;
+}

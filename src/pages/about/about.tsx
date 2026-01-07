@@ -1,7 +1,8 @@
-import styles from '../../assets/commonStyles/commonStyles.module.scss';
-import './about.scss';
-import SectionTitle from '../../components/sectionTitle/sectionTitle';
-
+import styles from "../../assets/commonStyles/commonStyles.module.scss";
+import "./about.scss";
+import SectionTitle from "../../components/sectionTitle/sectionTitle";
+import { SmartImage } from "../../components/smartImage/smartImage";
+import aboutImg from "../../assets/images/about/about-consultation.jpg";
 
 const AboutSection: React.FC = () => {
   return (
@@ -15,28 +16,44 @@ const AboutSection: React.FC = () => {
           />
 
           <div className="twoCol">
-            <div className="textBlock">
-              <p>
-                SkinLab Medical was founded by a Registered Nurse with over five years of clinical experience.
-                Starting her career in A&amp;E, she later moved into the private sector, working within
-                high-end wellness and longevity clinics across Chelsea and Battersea.
-              </p>
-              <p>
-                This background in acute medicine combined with advanced aesthetic training forms the foundation
-                of SkinLab Medical’s safe, evidence-based approach to skin health.
-              </p>
+            <div className="textCheck">
+              <div className="textBlock">
+                <p>
+                  SkinLab Medical was founded by a Registered Nurse with over
+                  five years of clinical experience. Starting her career in
+                  A&amp;E, she later moved into the private sector, working
+                  within high-end wellness and longevity clinics across Chelsea
+                  and Battersea.
+                </p>
+                <p>
+                  This background in acute medicine combined with advanced
+                  aesthetic training forms the foundation of SkinLab Medical’s
+                  safe, evidence-based approach to skin health.
+                </p>
+              </div>
+              <div className="checklist">
+                <div className="checkItem">✔ Medical integrity</div>
+                <div className="checkItem">✔ Natural, long-term results</div>
+                <div className="checkItem">✔ Personalised treatment plans</div>
+                <div className="checkItem">✔ Calm, clinical environment</div>
+              </div>
             </div>
 
-            <div className="checklist">
-              <div className="checkItem">✔ Medical integrity</div>
-              <div className="checkItem">✔ Natural, long-term results</div>
-              <div className="checkItem">✔ Personalised treatment plans</div>
-              <div className="checkItem">✔ Calm, clinical environment</div>
+            <div className="sideCol">
+              <div className="aboutMedia" aria-hidden="true">
+                <SmartImage
+                  src={aboutImg}
+                  alt=""
+                  className="aboutMediaImg"
+                  priority={false}
+                />
+                <div className="aboutMediaOverlay" />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-}
-export default AboutSection
+};
+export default AboutSection;
