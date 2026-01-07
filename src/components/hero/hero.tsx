@@ -1,9 +1,8 @@
 import styles from '../../assets/commonStyles/commonStyles.module.scss';
 import { WHATSAPP_LINK } from '../../utils/utils';
-import { Pill } from "../pill/pill";
+import Pill from '../pill/pill';
 
-
-export function HeroSection() {
+const HeroSection: React.FC = () => {
   return (
     <main id="top" className={styles.hero}>
       <div className={styles.container}>
@@ -96,3 +95,4 @@ export function HeroSection() {
     </main>
   );
 }
+export default HeroSection

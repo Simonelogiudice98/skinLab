@@ -1,6 +1,6 @@
-import { SectionTitle } from "../../components/sectionTitle/sectionTitle";
 import type { Concern } from "../../interfaces/skinLab.types";
 import styles from '../../assets/commonStyles/commonStyles.module.scss';
+import SectionTitle from "../../components/sectionTitle/sectionTitle";
 
 type Props = {
   concerns: Concern[];

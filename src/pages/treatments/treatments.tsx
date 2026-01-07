@@ -1,5 +1,5 @@
 import styles from '../../assets/commonStyles/commonStyles.module.scss';
-import { SectionTitle } from '../../components/sectionTitle/sectionTitle';
+import SectionTitle from '../../components/sectionTitle/sectionTitle';
 import type { Treatment } from '../../interfaces/skinLab.types';
 import { WHATSAPP_LINK } from '../../utils/utils';
 

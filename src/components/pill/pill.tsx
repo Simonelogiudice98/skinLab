@@ -3,6 +3,8 @@ import styles from '../../assets/commonStyles/commonStyles.module.scss';
 
 type Props = { children: React.ReactNode };
 
-export function Pill({ children }: Props) {
+const Pill: React.FC<Props> = ({children }) => {
+
   return <span className={styles.pill}>{children}</span>;
 }
+export default Pill

@@ -1,5 +1,5 @@
 import styles from '../../assets/commonStyles/commonStyles.module.scss';
-import { Pill } from "../pill/pill";
+import Pill from '../pill/pill';
 
 type Props = {
   overline: string;
@@ -7,7 +7,7 @@ type Props = {
   subtitle?: string;
 };
 
-export function SectionTitle({ overline, title, subtitle }: Props) {
+const SectionTitle: React.FC<Props> = ({ overline, title, subtitle }) => {
   return (
     <header className={styles.sectionHeader}>
       <Pill>{overline}</Pill>
@@ -16,3 +16,4 @@ export function SectionTitle({ overline, title, subtitle }: Props) {
     </header>
   );
 }
+export default SectionTitle
