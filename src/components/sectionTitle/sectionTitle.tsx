@@ -1,4 +1,4 @@
-import styles from '../../assets/commonStyles/commonStyles.module.scss';
+import './sectionTitle.scss';
 import Pill from '../pill/pill';
 
 type Props = {
@@ -9,10 +9,10 @@ type Props = {
 
 const SectionTitle: React.FC<Props> = ({ overline, title, subtitle }) => {
   return (
-    <header className={styles.sectionHeader}>
+    <header className="sectionHeader">
       <Pill>{overline}</Pill>
-      <h2 className={styles.h2}>{title}</h2>
-      {subtitle && <p className={styles.sub}>{subtitle}</p>}
+      <h2 className="h2">{title}</h2>
+      {subtitle && <p className="sub">{subtitle}</p>}
     </header>
   );
 }
