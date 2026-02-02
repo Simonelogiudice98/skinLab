@@ -16,8 +16,8 @@ const TreatmentsSection: React.FC<Props> = ({ treatments }) => {
         <div className={styles.panel}>
           <SectionTitle
             overline="Treatments"
-            title="Results-driven treatments"
-            subtitle="Every plan combines in-clinic treatments with curated homecare for long-term transformation."
+            title="Treatment Menù"
+            subtitle="Medically led. Results driven. Personalised to you."
           />
 
           <div className="grid2">
