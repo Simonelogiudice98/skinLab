@@ -5,6 +5,13 @@ import microImg from "../../assets/images/treatments/microneedling.png";
 import consultationImg from "../../assets/images/treatments/consultation.png";
 import comboImg from "../../assets/images/treatments/combination-treatment.png";
 import rosaceaImg from "../../assets/images/treatments/rosacea.png";
+import SpaOutlinedIcon from "@mui/icons-material/SpaOutlined"; // conditioning / reset
+import ScienceOutlinedIcon from "@mui/icons-material/ScienceOutlined"; // peels
+import AutoFixHighOutlinedIcon from "@mui/icons-material/AutoFixHighOutlined"; // microneedling
+import LayersOutlinedIcon from "@mui/icons-material/LayersOutlined"; // combo programmes
+import LocalFloristOutlinedIcon from "@mui/icons-material/LocalFloristOutlined"; // rosacea / calming
+import MedicalServicesOutlinedIcon from "@mui/icons-material/MedicalServicesOutlined"; // consultation
+
 
 export const concerns: Concern[] = [
   {
@@ -30,7 +37,7 @@ export const concerns: Concern[] = [
 
 export const treatments: Treatment[] = [
   {
-    badge: "Skin Conditioning & Preparation",
+    badge:SpaOutlinedIcon,
     title: "Essential Skin Reset",
     description:
       "A calming, clinical facial designed to restore balance and strengthen the skin barrier.",
@@ -44,7 +51,7 @@ export const treatments: Treatment[] = [
   },
 
   {
-    badge: "✨",
+    badge: ScienceOutlinedIcon,
     title: "Medical Chemical Peels",
     description:
       "Targeting hyperpigmentation, uneven tone and post-acne marks.\n\nOur medical-grade peels are carefully selected and introduced progressively to correct pigmentation and improve skin clarity while prioritising skin safety.",
@@ -65,7 +72,7 @@ export const treatments: Treatment[] = [
   },
 
   {
-    badge: "✨",
+    badge: AutoFixHighOutlinedIcon,
     title: "Medical Microneedling",
     description:
       "For acne scarring, texture and collagen stimulation.\n\nMedical microneedling works by stimulating collagen production and repairing skin from within, improving texture and overall skin quality.",
@@ -84,7 +91,7 @@ export const treatments: Treatment[] = [
   },
 
   {
-    badge: "✨",
+    badge:LayersOutlinedIcon,
     title: "Combination Treatment Programmes",
     description:
       "Our most effective approach for pigmentation and acne scarring.\n\nBy combining microneedling and chemical peels, we treat both surface pigmentation and deeper skin damage for enhanced, long-lasting results.",
@@ -93,10 +100,9 @@ export const treatments: Treatment[] = [
   },
 
   {
-    badge: "🌿",
+    badge:LocalFloristOutlinedIcon,
     title: "Rosacea-Specific Programmes",
     description: "Calming, barrier-focused and medically guided.",
-    price: { label: "—" },
     image:rosaceaImg,
     sections: [
       {
@@ -115,7 +121,7 @@ export const treatments: Treatment[] = [
   },
 
   {
-    badge: "🩺",
+    badge: MedicalServicesOutlinedIcon,
     title: "Consultation",
     description: "All treatments require a consultation prior to treatment.",
     price: { label: "£50", note: "(Redeemable against any treatment or package)" },

@@ -20,16 +20,15 @@ export type Treatment = {
   subtitle?: string;        
   description: string;
   bullets?: string[];
-  price: Price;
+  price?: Price;
 
   sections?: Array<{
     heading: string;         
     items: TreatmentPackage[];
   }>;
 
-  // opzionali
   note?: string;         
-  badge?: string;        
+  badge?: React.ElementType;        
   image?: string; 
   imageFit?: "cover" | "contain";
   imagePosition?: string;        

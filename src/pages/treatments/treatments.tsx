@@ -42,14 +42,21 @@ export default function TreatmentsSection({ treatments }: Props) {
                   </div>
                 ) : null}
                 <div className="treatHead">
-                  {t.badge ? <div className="treatBadge">{t.badge}</div> : null}
+                  {t.badge ? (
+                    <div className="treatBadge" aria-hidden="true">
+                      <t.badge className="treatBadgeIcon" />
+                    </div>
+                  ) : null}
 
                   <div className="treatTop">
                     <h3 className={styles.h3}>{t.title}</h3>
-                    <span className="priceFrom">{t.price.label}</span>
+
+                    {t.price?.label ? (
+                      <span className="priceFrom">{t.price.label}</span>
+                    ) : null}
                   </div>
 
-                  {t.price.note ? (
+                  {t.price?.note ? (
                     <div className="priceNote">{t.price.note}</div>
                   ) : null}
                 </div>
