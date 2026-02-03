@@ -4,12 +4,35 @@ export interface Concern  {
   treatments: string[];
 };
 
-export interface Treatment {
+export type Price = {
+  label: string;   
+  note?: string;   
+};
+
+export type TreatmentPackage = {
+  name: string;    
+  details?: string; 
+  price: string;   
+};
+
+export type Treatment = {
   title: string;
-  image?: string;
-  priceFrom: string;
+  subtitle?: string;        
   description: string;
-  bullets: string[];
+  bullets?: string[];
+  price: Price;
+
+  sections?: Array<{
+    heading: string;         
+    items: TreatmentPackage[];
+  }>;
+
+  // opzionali
+  note?: string;         
+  badge?: string;        
+  image?: string; 
+  imageFit?: "cover" | "contain";
+  imagePosition?: string;        
 };
 
 export interface SmartImageProps  {
