@@ -106,10 +106,21 @@ export default function TreatmentsSection({ treatments }: Props) {
 
           <div className="ctaRow">
             <div>
-              <div className="ctaTitle">Ready to transform your skin?</div>
-              <div className="ctaSub">
-                Start with a personalised consultation — professional,
-                evidence-based, tailored to you.
+              <div>
+                <p className="ctaTitle">Our Approach</p>
+                <p>
+                  We prioritise skin preparation, safety and a progressive treatment plan. Results are achieved gradually, with a focus on long term skin health rather than quick fixes.
+                </p>
+              </div>
+
+              <div>
+                <div className="ctaTitle">
+                  Not sure which treatment is right for you?
+                </div>
+                <div className="ctaSub">
+                  Book a consultation and let us create a personalised plan for
+                  your skin.
+                </div>
               </div>
             </div>
 

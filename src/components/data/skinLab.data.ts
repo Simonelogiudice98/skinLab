@@ -1,10 +1,4 @@
 import type { Concern, Treatment } from "../../interfaces/skinLab.types.ts";
-import resetImg from "../../assets/images/treatments/essential-reset.png";
-import peelsImg from "../../assets/images/treatments/peels.jpg";
-import microImg from "../../assets/images/treatments/microneedling.png";
-import consultationImg from "../../assets/images/treatments/consultation.png";
-import comboImg from "../../assets/images/treatments/combination-treatment.png";
-import rosaceaImg from "../../assets/images/treatments/rosacea.png";
 import SpaOutlinedIcon from "@mui/icons-material/SpaOutlined"; // conditioning / reset
 import ScienceOutlinedIcon from "@mui/icons-material/ScienceOutlined"; // peels
 import AutoFixHighOutlinedIcon from "@mui/icons-material/AutoFixHighOutlined"; // microneedling
@@ -36,36 +30,36 @@ export const concerns: Concern[] = [
 
 
 export const treatments: Treatment[] = [
-  {
+    {
+    badge: MedicalServicesOutlinedIcon,
+    title: "Consultation & Skin Analysis",
+    description: "All treatments begin with a comprehensive consultation and skin analysis. This allows us to fully understand your skin concerns, history and goals, ensuring treatments are safe, suitable and effective.",
+    price: { label: "£50", note: "(Redeemable against any treatment or package)" },
+  },
+    {
     badge:SpaOutlinedIcon,
     title: "Essential Skin Reset",
     description:
-      "A calming, clinical facial designed to restore balance and strengthen the skin barrier.",
+      "A clinically led skin conditioning treatment designed to restore balance, strengthen the skin barrier and improve overall skin health. Ideal as a first treatment, between advanced procedures, or as ongoing maintenance.",
     bullets: [
-      "Deep cleanse, gentle exfoliation and skin conditioning",
-      "Tailored to sensitive, reactive and compromised skin",
-      "Ideal before advanced treatments or as maintenance",
+      "Best for : sensitive skin, rosacea prone skin, skin preparation and maintenance",
     ],
     price: { label: "£150" },
-    image: resetImg,
   },
-
   {
     badge: ScienceOutlinedIcon,
     title: "Medical Chemical Peels",
     description:
-      "Targeting hyperpigmentation, uneven tone and post-acne marks.\n\nOur medical-grade peels are carefully selected and introduced progressively to correct pigmentation and improve skin clarity while prioritising skin safety.",
+      "Medical grade chemical peels tailored to your skin type and concerns. Treatments are introduced gradually to improve pigmentation, clarity and texture while prioritising skin safety.",
     price: {
       label: "From £180",
-      note: "(Final peel type confirmed following consultation)",
     },
-    image: peelsImg,
     sections: [
       {
-        heading: "Chemical Peel Courses",
+        heading: "Peel Courses",
         items: [
-          { name: "Skin Renewal Peel", details: "4 × superficial medical peels", price: "£680" },
-          { name: "Advanced Correction Peel", details: "6 × personalised medical peels", price: "£1,080" },
+          { name: "Skin Renewal Peel", details: "4 treatments to improve tone and clarity", price: "£680" },
+          { name: "Advanced Correction Peel", details: "6 treatments for stubborn pigmentation and uneven texture", price: "£1,080" },
         ],
       },
     ],
@@ -75,16 +69,14 @@ export const treatments: Treatment[] = [
     badge: AutoFixHighOutlinedIcon,
     title: "Medical Microneedling",
     description:
-      "For acne scarring, texture and collagen stimulation.\n\nMedical microneedling works by stimulating collagen production and repairing skin from within, improving texture and overall skin quality.",
-    price: { label: "£250 per session" },
-    image: microImg,
-    imageFit: "contain",
-    sections: [
+      "A collagen stimulating treatment designed to improve acne scarring, skin texture and overall skin quality.",
+      price: { label: "£250 per session" },
+      sections: [
       {
         heading: "Microneedling Courses",
         items: [
-          { name: "Skin Repair Programme", details: "3 × sessions", price: "£690" },
-          { name: "Intensive Skin Remodelling Programme", details: "4 × sessions", price: "£920" },
+          { name: "Skin Repair Programme", details: "3 treatments for mild to moderate scarring", price: "£690" },
+          { name: "Intensive Skin Remodelling Programme", details: "4 treatments for deeper scarring and texture concerns", price: "£920" },
         ],
       },
     ],
@@ -94,37 +86,29 @@ export const treatments: Treatment[] = [
     badge:LayersOutlinedIcon,
     title: "Combination Treatment Programmes",
     description:
-      "Our most effective approach for pigmentation and acne scarring.\n\nBy combining microneedling and chemical peels, we treat both surface pigmentation and deeper skin damage for enhanced, long-lasting results.",
+      "Our most effective approach for treating pigmentation and acne scarring. A personalised combination of chemical peels and microneedling to address both surface and deeper skin concerns.",
     price: { label: "£1,350 – £1,650", note: "Consultation required" },
-    image: comboImg,
   },
 
   {
     badge:LocalFloristOutlinedIcon,
-    title: "Rosacea-Specific Programmes",
-    description: "Calming, barrier-focused and medically guided.",
-    image:rosaceaImg,
+    title: "Rosacea Focused Treatments",
+    description: "Gentle, barrier focused treatments designed to calm inflammation, strengthen the skin barrier and support long term rosacea management.",
     sections: [
       {
         heading: "",
         items: [
-          { name: "Rosacea Skin Stabilisation Programme", details: "4 × Essential Skin Reset", price: "£520" },
+          { name: "Rosacea Skin Stabilisation Programme", details: "4 calming Essential Skin Reset treatments", price: "£520" },
           {
             name: "Advanced Rosacea Skin Conditioning Programme",
-            details: "Combination skin conditioning and gentle clinical treatments",
+            details: "A combination of skin conditioning and gentle clinical treatments (only if suitable)",
             price: "£780",
           },
-          { name: "Rosacea Maintenance Treatment", price: "£140" },
+          { name: "Rosacea Maintenance Treatment",
+            details:"Ongoing care to support skin comfort and stability",
+            price: "£140" },
         ],
       },
     ],
-  },
-
-  {
-    badge: MedicalServicesOutlinedIcon,
-    title: "Consultation",
-    description: "All treatments require a consultation prior to treatment.",
-    price: { label: "£50", note: "(Redeemable against any treatment or package)" },
-    image:consultationImg,
   },
 ];
