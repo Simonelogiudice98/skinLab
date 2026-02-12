@@ -3,63 +3,74 @@
   background:
     radial-gradient(900px 520px at 15% 0%, rgba(183, 158, 122, 0.22), transparent 60%),
     radial-gradient(900px 520px at 90% 20%, rgba(42, 42, 42, 0.08), transparent 55%);
+
+    .container {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+
+      .heroGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: start;
+
+        .heroCopy {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+          margin: 0 auto;
+
+          .pill{
+            text-align: center;
+            margin-bottom: 2rem;
+          }
+
+          .h1 {
+            margin: 0;
+            font-size: clamp(34px, 4vw, 54px);
+            line-height: 1.03;
+            letter-spacing: -0.8px;
+
+              .accent {
+                position: relative;
+                display: inline-block;
+                font-style: italic;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  bottom: -6px;
+                  height: 10px;
+                  background: var(--accentSoft);
+                  border-radius: 999px;
+                }
+              }
+
+          }
+
+          .lead {
+              margin: 0;
+              color: rgba(42, 42, 42, 0.78);
+              font-size: 15px;
+              line-height: 1.7;
+              max-width: 62ch; 
+          }
+
+          .heroActions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+
+            
+          }
+        }
+      }
+    }
 }
 
-.container {
-  width: min(1180px, calc(100% - 48px));
-  margin: 0 auto;
-}
 
-.heroGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: start;
-}
-
-.heroCopy {
-  width: min(1180px, calc(100% - 48px));
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.accent {
-  position: relative;
-  display: inline-block;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -6px;
-    height: 10px;
-    background: var(--accentSoft);
-    border-radius: 999px;
-  }
-}
-
-.h1 {
-  margin: 0;
-  font-size: clamp(34px, 4vw, 54px);
-  line-height: 1.03;
-  letter-spacing: -0.8px;
-}
-
-.lead {
-  margin: 0;
-  color: rgba(42, 42, 42, 0.78);
-  font-size: 15px;
-  line-height: 1.7;
-  max-width: 62ch; 
-}
-
-.heroActions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 6px;
-}
 
 .btnPrimary,
 .btnGhost {
@@ -147,6 +158,8 @@
 }
 
 .heroJourney {
+  margin: 0 auto;
+  max-width: 1100px;
   margin-top: 16px;
   width: 100%;
 }
