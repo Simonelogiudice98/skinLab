@@ -1,6 +1,6 @@
 import './footer.scss';
 import { WHATSAPP_LINK } from '../../utils/utils';
-import logo from "../../assets/img/skinLabLogo.svg";
+import logo from "../../assets/img/skinlabLogo.svg";
 
 const Footer: React.FC = () => {
   return (
