@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
         <div className="heroGrid">
           <div className="heroCopy">
             <div className="pill">
-              <Pill>Medically led • Results driven • Personalized to you</Pill>
+              <Pill variant="light">Medically led • Results driven • Personalized to you</Pill>
             </div>
 
             <h1 className="h1">

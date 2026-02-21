@@ -1,5 +1,5 @@
 .page {
-  --bg: #e3e2dd;
+  --bg: #e7dcd6;
   --surface: #f2f1ed;
   --surface2: #eceae5;
   --text: #2a2a2a;
@@ -57,11 +57,15 @@
   border-radius: 999px;
   background-color: #56555d;
   border: 1px solid rgba(42, 42, 42, 0.16);
-  color: #f0d080 !important;
+  color: #f7eee5;
   font-size: 12px;
   font-weight: 600;
 }
-
+.pillLight {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #B8860B;
+  color: #B8860B !important;
+}
 
 .section {
   padding: 58px 0;

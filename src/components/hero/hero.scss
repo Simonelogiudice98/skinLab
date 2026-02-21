@@ -1,11 +1,20 @@
 @keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 
 @keyframes arrowNudge {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(4px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
 }
 
 .hero {
@@ -91,30 +100,21 @@
             border-radius: 999px;
             font-weight: 800;
             font-size: 13px;
-            background-color: #56555d;
-            border: 1px solid rgba(212, 175, 100, 0.25);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid #b8860b;
             position: relative;
             overflow: hidden;
             transition:
-              background-color 0.3s ease,
+              background 0.3s ease,
               box-shadow 0.3s ease,
               transform 0.2s ease;
 
             span {
-              background: linear-gradient(
-                90deg,
-                #c9a84c 0%,
-                #f0d080 40%,
-                #d4af60 60%,
-                #b8962e 100%
-              );
-              background-size: 200% auto;
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              background-clip: text;
+              color: #b8860b;
+              -webkit-text-fill-color: #b8860b;
               position: relative;
               z-index: 1;
-              transition: background-position 0.4s ease;
+              transition: color 0.3s ease;
             }
 
             &::before {
@@ -124,7 +124,7 @@
               background: linear-gradient(
                 105deg,
                 transparent 30%,
-                rgba(255, 223, 140, 0.35) 50%,
+                rgba(184, 134, 11, 0.2) 50%,
                 transparent 70%
               );
               background-size: 200% 100%;
@@ -135,12 +135,14 @@
 
             &:focus-visible {
               outline: none;
-              box-shadow: 0 0 0 3px rgba(183, 158, 122, 0.28);
+              box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.28);
             }
 
             &:hover {
-              background-color: #4a4952;
-              box-shadow: 0 4px 20px rgba(86, 85, 109, 0.4), 0 0 0 1px rgba(212, 175, 100, 0.4);
+              background: rgba(255, 255, 255, 0.15);
+              box-shadow:
+                0 4px 20px rgba(184, 134, 11, 0.2),
+                0 0 0 1px #b8860b;
               transform: translateY(-1px);
 
               &::before {
@@ -148,27 +150,25 @@
                 animation: shimmer 1.4s ease infinite;
               }
 
-              span {
-                background-position: right center;
-              }
-
               .btnIcon {
-                color: #f0d080;
+                color: #b8860b;
                 animation: arrowNudge 0.6s ease 0.1s;
               }
             }
 
             &:active {
               transform: translateY(0px);
-              box-shadow: 0 2px 10px rgba(86, 85, 109, 0.3);
+              box-shadow: 0 2px 10px rgba(184, 134, 11, 0.15);
             }
 
             .btnIcon {
               font-size: 18px !important;
-              color: #d4af60;
+              color: #b8860b;
               position: relative;
               z-index: 1;
-              transition: transform 0.3s ease, color 0.3s ease;
+              transition:
+                transform 0.3s ease,
+                color 0.3s ease;
             }
           }
         }
