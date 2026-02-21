@@ -12,7 +12,7 @@ const AboutSection: React.FC = () => {
           <SectionTitle
             overline="About"
             title="A Clinical, Personalised Approach to Skin Health"
-            subtitle="A nurse-led skin clinic founded on acute medicine experience and advanced aesthetic training."
+            subtitle="A nurse led skin clinic founded on acute medicine experience and advanced aesthetic training."
           />
 
           <div className="twoCol">
@@ -22,20 +22,20 @@ const AboutSection: React.FC = () => {
                   SkinLab Medical was founded by a Registered Nurse with over
                   five years of clinical experience. Starting her career in
                   A&amp;E, she later moved into the private sector, working
-                  within high-end wellness and longevity clinics across Chelsea
+                  within high end wellness and longevity clinics across Chelsea
                   and Battersea.
                 </p>
                 <p>
                   This background in acute medicine combined with advanced
                   aesthetic training forms the foundation of SkinLab Medical’s
-                  safe, evidence-based approach to skin health.
+                  safe, evidence based approach to skin health.
                 </p>
               </div>
               <div className="checklist">
-                <div className="checkItem">✔ Medical integrity</div>
-                <div className="checkItem">✔ Natural, long-term results</div>
-                <div className="checkItem">✔ Personalised treatment plans</div>
-                <div className="checkItem">✔ Calm, clinical environment</div>
+                <div className="checkItem"><span>✔</span> Medical integrity</div>
+                <div className="checkItem"><span>✔</span> Natural, long term results</div>
+                <div className="checkItem"><span>✔</span> Personalised treatment plans</div>
+                <div className="checkItem"><span>✔</span> Calm, clinical environment</div>
               </div>
             </div>
 

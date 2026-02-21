@@ -1,6 +1,6 @@
 import "./header.scss";
-import { WHATSAPP_LINK } from "../../utils/utils";
 import logo from "../../assets/img/skinlabLogo.svg";
+import BookConsultationButton from "../../components/bookConsultationButton/BookConsultationButton";
 
 const Header: React.FC = () => {
   return (
@@ -15,14 +15,7 @@ const Header: React.FC = () => {
           <a href="#about">About</a>
           <a href="#concerns">Skin Concerns</a>
           <a href="#treatments">Treatments</a>
-          <a
-            className="navCta"
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Book Consultation
-          </a>
+          <BookConsultationButton />
         </div>
       </div>
     </nav>

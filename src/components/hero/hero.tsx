@@ -1,9 +1,7 @@
 import "./hero.scss";
-import { WHATSAPP_LINK } from "../../utils/utils";
 import Pill from "../pill/pill";
-import ClientJourneyMini from "../clientJourneyMini/clientJourneyMini";
-import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import BookConsultationButton from "../bookConsultationButton/BookConsultationButton";
 
 const HeroSection: React.FC = () => {
   return (
@@ -17,13 +15,14 @@ const HeroSection: React.FC = () => {
 
             <h1 className="h1">
               Nurse led skin clinic for{" "}
-              <span className="accent">clear, even, healthy skin</span>
+              <span className="accent">clear, even, healthy </span> skin
             </h1>
 
             <p className="lead">
               SkinLab Medical specialises in treating hyperpigmentation, acne
               scarring and rosacea through evidence based, results driven skin
               treatments.
+              <br />
               <br />
               Your journey starts here.
             </p>
@@ -36,16 +35,7 @@ const HeroSection: React.FC = () => {
             </div>
 
             <div className="heroJourney">
-              <ClientJourneyMini />
-              <a
-                className="btnPrimary"
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>Book Your Consultation</span>
-                <ArrowForwardRoundedIcon className="btnIcon" />
-              </a>
+              <BookConsultationButton />
             </div>
           </div>
         </div>

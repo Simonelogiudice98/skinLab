@@ -1,9 +1,9 @@
 import styles from "../../assets/commonStyles/commonStyles.module.scss";
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
-import { WHATSAPP_LINK } from "../../utils/utils";
 import "./treatments.scss";
 import type { Treatment } from "../../interfaces/skinLab.types";
 import { SmartImage } from "../../components/smartImage/smartImage";
+import BookConsultationButton from "../../components/bookConsultationButton/BookConsultationButton";
 
 interface Props {
   treatments: Treatment[];
@@ -124,15 +124,7 @@ export default function TreatmentsSection({ treatments }: Props) {
               </div>
             </div>
 
-            <a
-              className="ctaBtn"
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>Book Your Consultation</span>
-              <span className="ctaArrow">→</span>
-            </a>
+            <BookConsultationButton />
           </div>
         </div>
       </div>

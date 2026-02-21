@@ -11,20 +11,20 @@ export const concerns: Concern[] = [
   {
     title: "Hyperpigmentation",
     description:
-      "Uneven skin tone, sun damage, dark marks and melasma can affect confidence and overall complexion. We use targeted, medical-grade solutions to improve pigmentation while supporting the skin barrier.",
+      "Uneven skin tone, sun damage, dark marks and melasma can affect confidence and overall complexion. We use targeted, medical grade solutions to improve pigmentation while supporting the skin barrier.",
     treatments: ["Chemical Peels", "Microneedling", "Personalised homecare plan"],
   },
   {
     title: "Acne Scarring",
     description:
-      "Post-acne texture, pitting and dark marks can be improved through collagen stimulation and resurfacing. We create structured plans that rebuild the skin from within for smoother, refined texture.",
+      "Post acne texture, pitting and dark marks can be improved through collagen stimulation and resurfacing. We create structured plans that rebuild the skin from within for smoother, refined texture.",
     treatments: ["Microneedling (CIT)", "Chemical Peels", "Targeted resurfacing"],
   },
   {
     title: "Rosacea",
     description:
-      "Rosacea requires a sensitive, clinical approach to reduce redness, inflammation and flare-ups. We focus on calming reactive skin, strengthening the barrier and stabilising triggers.",
-    treatments: ["Sensitive-skin Peels", "Barrier repair protocols", "Clinical guidance"],
+      "Rosacea requires a sensitive, clinical approach to reduce redness, inflammation and flare ups. We focus on calming reactive skin, strengthening the barrier and stabilising triggers.",
+    treatments: ["Sensitive skin Peels", "Barrier repair protocols", "Clinical guidance"],
   },
 ];
 
