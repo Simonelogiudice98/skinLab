@@ -15,18 +15,21 @@ export type TreatmentPackage = {
   price: string;   
 };
 
+export type Bullet = {
+  bold?: string;
+  text: string;
+};
+
 export type Treatment = {
   title: string;
   subtitle?: string;        
   description: string;
-  bullets?: string[];
+  bullets?: Bullet[];  // ← aggiornato
   price?: Price;
-
   sections?: Array<{
     heading: string;         
     items: TreatmentPackage[];
   }>;
-
   note?: string;         
   badge?: React.ElementType;        
   image?: string; 

@@ -57,7 +57,11 @@ export default function TreatmentsSection({ treatments }: Props) {
                   </div>
 
                   {t.price?.note ? (
-                    <div className="priceNote">{t.price.note}</div>
+                    <div className="priceNote">
+                      <strong>
+                        <em>{t.price.note}</em>
+                      </strong>
+                    </div>
                   ) : null}
                 </div>
 
@@ -65,11 +69,18 @@ export default function TreatmentsSection({ treatments }: Props) {
                   <Paragraphs text={t.description} />
 
                   {t.bullets?.length ? (
-                    <ul className={styles.list}>
-                      {t.bullets.map((b) => (
-                        <li key={b}>{b}</li>
-                      ))}
-                    </ul>
+                    <div>
+                      {t.bullets.map((b) =>
+                        b.bold ? (
+                          <p key={b.text}>
+                            <strong>{b.bold}</strong>
+                            {b.text}
+                          </p>
+                        ) : (
+                          <p key={b.text}>{b.text}</p>
+                        ),
+                      )}
+                    </div>
                   ) : null}
 
                   {t.sections?.length
@@ -109,7 +120,9 @@ export default function TreatmentsSection({ treatments }: Props) {
               <div>
                 <p className="ctaTitle">Our Approach</p>
                 <p>
-                  We prioritise skin preparation, safety and a progressive treatment plan. Results are achieved gradually, with a focus on long term skin health rather than quick fixes.
+                  We prioritise skin preparation, safety and a progressive
+                  treatment plan. Results are achieved gradually, with a focus
+                  on long term skin health rather than quick fixes.
                 </p>
               </div>
 
