@@ -58,11 +58,12 @@
   font-size: 12px;
   padding: 6px 10px;
   border-radius: 999px;
-  border: 1.5px solid #c9a227;
+  border: 1.5px solid #56555d;
   color: #b8860b;
   position: relative;
   overflow: hidden;
-  white-space: nowrap; 
+  white-space: nowrap;
+  cursor: pointer;
 
   &::after {
     content: '';
@@ -77,7 +78,13 @@
       rgba(255, 220, 100, 0.6) 50%,
       transparent 100%
     );
-    animation: shimmerPrice 2.5s infinite;
+    animation: none;
+    
+  }
+
+  &:hover::after {
+    animation: shimmerPrice 2s ease forwards;
+    
   }
 }
 
@@ -87,6 +94,11 @@
     align-items: flex-start;
     gap: 6px;
   }
+}
+
+@keyframes shimmerPrice {
+  0%   { left: -75%; }
+  100% { left: 150%; }
 }
 
 .priceNote {
