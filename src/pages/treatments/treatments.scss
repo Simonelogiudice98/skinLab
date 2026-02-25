@@ -36,10 +36,8 @@
 .treatBadgeIcon {
   font-size: 18px !important;
 
-  /* ✅ colore icona */
   color: rgba(183, 158, 122, 0.95);
 
-  /* ✅ mini “pallino” soft dietro (molto chic) */
   background: rgba(183, 158, 122, 0.16);
   border: 1px solid rgba(183, 158, 122, 0.22);
   border-radius: 10px;
@@ -52,16 +50,43 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .priceFrom {
   font-weight: 900;
-  color: rgba(42, 42, 42, 0.72);
-  border: 1px solid rgba(42, 42, 42, 0.14);
-  background: rgba(227, 226, 221, 0.7);
+  font-size: 12px;
   padding: 6px 10px;
   border-radius: 999px;
-  font-size: 12px;
+  border: 1.5px solid #c9a227;
+  color: #b8860b;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap; 
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(255, 220, 100, 0.6) 50%,
+      transparent 100%
+    );
+    animation: shimmerPrice 2.5s infinite;
+  }
+}
+
+@media (max-width: 600px) {
+  .treatTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
 }
 
 .priceNote {
@@ -107,7 +132,6 @@
   gap: 14px;
   padding: 10px 12px;
   border-radius: 14px;
-  background: rgba(242, 241, 237, 0.55);
   border: 1px solid rgba(42, 42, 42, 0.10);
 }
 
@@ -137,29 +161,24 @@
   border-radius: 18px;
 
   display: grid;
-  grid-template-columns: 1fr auto; /* testo | bottone */
+  grid-template-columns: 1fr auto; 
   gap: 16px;
   align-items: center;
 
-  background:
-    radial-gradient(700px 240px at 12% 30%, rgba(183, 158, 122, 0.10), transparent 60%),
-    rgba(242, 241, 237, 0.55);
+  background:#f7eee5;
   border: 1px solid rgba(42, 42, 42, 0.10);
   box-shadow: 0 14px 34px rgba(42, 42, 42, 0.06);
 }
 
-/* wrapper per i 2 div testo: uno sotto l’altro */
 .ctaRow > div {
   min-width: 0;
 }
 
-/* SOLO il primo blocco (che contiene i due div) lo mettiamo in colonna */
 .ctaRow > div:first-child {
   display: grid;
   gap: 14px;
 }
 
-/* separatore “soft” tra i due blocchi testo */
 .ctaRow > div:first-child > div + div {
   padding-top: 14px;
   border-top: 1px solid rgba(42, 42, 42, 0.10);
@@ -182,7 +201,6 @@
   max-width: 70ch;
 }
 
-/* bottone “pill” come prima */
 .ctaBtn {
   text-decoration: none;
   display: inline-flex;
@@ -230,7 +248,6 @@
   transition: transform 0.18s ease;
 }
 
-/* mobile: bottone sotto, full width se vuoi */
 @media (max-width: 760px) {
   .ctaRow {
     grid-template-columns: 1fr;
