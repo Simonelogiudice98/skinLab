@@ -2,6 +2,7 @@ import "./hero.scss";
 import Pill from "../pill/pill";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import BookConsultationButton from "../bookConsultationButton/BookConsultationButton";
+import ClientJourneyMini from "../clientJourneyMini/clientJourneyMini";
 
 const HeroSection: React.FC = () => {
   return (
@@ -37,6 +38,7 @@ const HeroSection: React.FC = () => {
             <div className="heroJourney">
               <BookConsultationButton />
             </div>
+            <ClientJourneyMini />
           </div>
         </div>
       </div>
