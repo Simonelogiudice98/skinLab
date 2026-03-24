@@ -76,6 +76,11 @@ export default function TreatmentsSection({ treatments }: Props) {
                           <div className="treatRows">
                             {sec.items.map((it) => (
                               <div key={it.name} className="treatRow">
+                                {it.price ? (
+                                  <div className="treatRowPrice">
+                                    {it.price}
+                                  </div>
+                                ) : null}
                                 <div className="treatRowLeft">
                                   <div className="treatRowName">{it.name}</div>
                                   {it.details ? (
@@ -84,11 +89,6 @@ export default function TreatmentsSection({ treatments }: Props) {
                                     </div>
                                   ) : null}
                                 </div>
-                                {it.price ? (
-                                  <div className="treatRowPrice">
-                                    {it.price}
-                                  </div>
-                                ) : null}
                               </div>
                             ))}
                           </div>
