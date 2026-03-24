@@ -20,22 +20,16 @@ export type Bullet = {
   text: string;
 };
 
-export type Treatment = {
+export interface Treatment {
   title: string;
-  subtitle?: string;        
-  description: string;
-  bullets?: Bullet[];  // ← aggiornato
-  price?: Price;
-  sections?: Array<{
-    heading: string;         
-    items: TreatmentPackage[];
-  }>;
-  note?: string;         
-  badge?: React.ElementType;        
-  image?: string; 
-  imageFit?: "cover" | "contain";
-  imagePosition?: string;        
-};
+  description?: string;
+  price?: { label?: string; note?: string };
+  bullets?: { bold?: string; text: string }[];
+  sections?: { heading: string; items: { name: string; details?: string; price: string }[] }[];
+  image?: string;
+  badge?: React.ElementType;
+  isConsultation?: boolean;
+}
 
 export interface SmartImageProps  {
  avif?: string;

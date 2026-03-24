@@ -158,6 +158,7 @@
   color: rgba(42, 42, 42, 0.68);
   font-size: 12.5px;
   line-height: 1.45;
+  white-space: pre-line;
 }
 
 .treatRowPrice {
@@ -165,6 +166,17 @@
   color: rgba(42, 42, 42, 0.82);
   white-space: nowrap;
   font-size: 13px;
+}
+
+
+.consultationCta {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(42, 42, 42, 0.10);
+}
+
+.treatRowPrice:empty {
+  display: none;
 }
 
 .ctaRow {

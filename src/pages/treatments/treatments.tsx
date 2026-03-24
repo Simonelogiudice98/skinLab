@@ -10,6 +10,7 @@ interface Props {
 }
 
 function Paragraphs({ text }: { text: string }) {
+  if (!text) return null;
   return (
     <>
       {text.split("\n\n").map((p) => (
@@ -41,75 +42,54 @@ export default function TreatmentsSection({ treatments }: Props) {
                     <div className="cardMediaOverlay" />
                   </div>
                 ) : null}
-                <div className="treatHead">
-                  {t.badge ? (
-                    <div className="treatBadge" aria-hidden="true">
-                      <t.badge className="treatBadgeIcon" />
-                    </div>
-                  ) : null}
 
+                <div className="treatHead">
                   <div className="treatTop">
                     <h3 className={styles.h3}>{t.title}</h3>
-
                     {t.price?.label ? (
                       <span className="priceFrom">{t.price.label}</span>
                     ) : null}
                   </div>
-
                   {t.price?.note ? (
                     <div className="priceNote">
-                      <strong>
-                        <em>{t.price.note}</em>
-                      </strong>
+                      <strong><em>{t.price.note}</em></strong>
                     </div>
                   ) : null}
                 </div>
 
                 <div className="treatBody">
-                  <Paragraphs text={t.description} />
-
-                  {t.bullets?.length ? (
-                    <div>
-                      {t.bullets.map((b) =>
-                        b.bold ? (
-                          <p key={b.text}>
-                            <strong>{b.bold}</strong>
-                            {b.text}
-                          </p>
-                        ) : (
-                          <p key={b.text}>{b.text}</p>
-                        ),
-                      )}
-                    </div>
-                  ) : null}
+                  <Paragraphs text={t.description ?? ""} />
 
                   {t.sections?.length
                     ? t.sections.map((sec) => (
-                        <div key={sec.heading} className="treatSection">
+                        <div key={sec.heading ?? "default"} className="treatSection">
                           {sec.heading ? (
-                            <div className="treatSectionTitle">
-                              {sec.heading}
-                            </div>
+                            <div className="treatSectionTitle">{sec.heading}</div>
                           ) : null}
-
                           <div className="treatRows">
                             {sec.items.map((it) => (
                               <div key={it.name} className="treatRow">
                                 <div className="treatRowLeft">
                                   <div className="treatRowName">{it.name}</div>
                                   {it.details ? (
-                                    <div className="treatRowDetails">
-                                      {it.details}
-                                    </div>
+                                    <div className="treatRowDetails">{it.details}</div>
                                   ) : null}
                                 </div>
-                                <div className="treatRowPrice">{it.price}</div>
+                                {it.price ? (
+                                  <div className="treatRowPrice">{it.price}</div>
+                                ) : null}
                               </div>
                             ))}
                           </div>
                         </div>
                       ))
                     : null}
+
+                  {t.isConsultation && (
+                    <div className="consultationCta">
+                      <BookConsultationButton />
+                    </div>
+                  )}
                 </div>
               </article>
             ))}
@@ -125,18 +105,13 @@ export default function TreatmentsSection({ treatments }: Props) {
                   on long term skin health rather than quick fixes.
                 </p>
               </div>
-
               <div>
-                <div className="ctaTitle">
-                  Not sure which treatment is right for you?
-                </div>
+                <div className="ctaTitle">Not sure which treatment is right for you?</div>
                 <div className="ctaSub">
-                  Book a consultation and let us create a personalised plan for
-                  your skin.
+                  Book a consultation and let us create a personalised plan for your skin.
                 </div>
               </div>
             </div>
-
             <BookConsultationButton />
           </div>
         </div>
