@@ -11,21 +11,21 @@ const HeroSection: React.FC = () => {
         <div className="heroGrid">
           <div className="heroCopy">
             <div className="pill">
-              <Pill variant="light">Medically led • Results driven • Personalized to you</Pill>
+              <Pill variant="light">
+                Medically led • Results driven • Personalized to you
+              </Pill>
             </div>
 
             <h1 className="h1">
-              Nurse led skin clinic for{" "}
-              <span className="accent">clear, even, healthy </span> skin
+              Medical Skin Treatments for{" "}
+              <span className="accent">
+                Hyperpigmentation, Acne Scarring & Rosacea
+              </span>
             </h1>
 
             <p className="lead">
-              SkinLab Medical specialises in treating hyperpigmentation, acne
-              scarring and rosacea through evidence based, results driven skin
-              treatments.
-              <br />
-              <br />
-              Your journey starts here.
+              Evidence based aesthetic treatments delivered by a registered
+              nurse, designed to restore skin health and confidence.
             </p>
 
             <div className="heroActions">

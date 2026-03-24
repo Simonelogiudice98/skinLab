@@ -1,9 +1,10 @@
 import type { Concern } from "../../interfaces/skinLab.types";
 import styles from "../../assets/commonStyles/commonStyles.module.scss";
-import './concerns.scss';
+import "./concerns.scss";
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 
 import { Sun, Layers, Shield, Sparkles } from "lucide-react";
+import BookConsultationButton from "../../components/bookConsultationButton/BookConsultationButton";
 
 type Props = {
   concerns: Concern[];
@@ -19,18 +20,21 @@ const ConcernsSection: React.FC<Props> = ({ concerns }) => {
   return (
     <section id="concerns" className={styles.section}>
       <div className={styles.container}>
-        <SectionTitle
-          overline="Skin concerns"
-          title="What we specialise in"
-          subtitle="Targeted treatments for common concerns, with a structured plan built around your skin."
-        />
-
+        <div className="concernsHeader">
+          <SectionTitle
+            overline="Skin concerns"
+            title="Skin concerns we treat"
+          />
+          <BookConsultationButton />
+        </div>
         <div className="grid1">
           {concerns.map((c) => (
             <article key={c.title} className={styles.card}>
               <div className="cardHead">
                 <div className="iconBadge" aria-hidden="true">
-                  {iconByTitle[c.title] ?? <Sparkles size={20} strokeWidth={1.6} />}
+                  {iconByTitle[c.title] ?? (
+                    <Sparkles size={20} strokeWidth={1.6} />
+                  )}
                 </div>
                 <h3 className="h3">{c.title}</h3>
               </div>

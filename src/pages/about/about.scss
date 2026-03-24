@@ -27,17 +27,50 @@
   border-radius: 18px;
   border: 1px solid rgba(42, 42, 42, 0.12);
   background: rgba(227, 226, 221, 0);
-  padding: 16px;
+  padding: 20px;
   display: grid;
-  gap: 10px;
+  gap: 14px;
   align-content: start;
 }
 
-.checkItem {
+.checklistHeadline {
+  font-size: 13px;
   font-weight: 700;
-  color: rgba(42, 42, 42, 0.85);
-  span{
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(42, 42, 42, 0.45);
+  margin: 0 0 4px;
+}
+
+.checkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  span {
     color: #aa9786;
+    font-size: 14px;
+    margin-top: 1px;
+    flex-shrink: 0;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  strong {
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(42, 42, 42, 0.85);
+  }
+
+  p {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(42, 42, 42, 0.6);
+    line-height: 1.65;
   }
 }
 

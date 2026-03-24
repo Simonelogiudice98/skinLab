@@ -20,22 +20,51 @@ const AboutSection: React.FC = () => {
               <div className="textBlock">
                 <p>
                   SkinLab Medical was founded by a Registered Nurse with over
-                  five years of clinical experience. Starting her career in
-                  A&amp;E, she later moved into the private sector, working
-                  within high end wellness and longevity clinics across Chelsea
-                  and Battersea.
+                  five years of clinical experience. Beginning her career in
+                  A&E, she later transitioned into the private sector, working
+                  within leading wellness and longevity clinics in Chelsea and
+                  Battersea.
                 </p>
                 <p>
-                  This background in acute medicine combined with advanced
-                  aesthetic training forms the foundation of SkinLab Medical’s
-                  safe, evidence based approach to skin health.
+                  This combination of medical expertise and advanced aesthetic
+                  training forms the foundation of SkinLab Medical’s safe,
+                  results driven approach to skin health.
                 </p>
               </div>
               <div className="checklist">
-                <div className="checkItem"><span>✔</span> Medical integrity</div>
-                <div className="checkItem"><span>✔</span> Natural, long term results</div>
-                <div className="checkItem"><span>✔</span> Personalised treatment plans</div>
-                <div className="checkItem"><span>✔</span> Calm, clinical environment</div>
+                <h3 className="checklistHeadline">
+                  Why Choose SkinLab Medical
+                </h3>
+                <div className="checkItem">
+                  <span>✔</span>
+                  <div>
+                    <strong>Nurse-Led Expertise</strong>
+                    <p>
+                      All treatments are performed by a registered nurse with
+                      clinical experience and advanced aesthetic training.
+                    </p>
+                  </div>
+                </div>
+                <div className="checkItem">
+                  <span>✔</span>
+                  <div>
+                    <strong>Personalised Treatment Plans</strong>
+                    <p>
+                      Every client receives a tailored treatment programme based
+                      on their skin concerns and goals.
+                    </p>
+                  </div>
+                </div>
+                <div className="checkItem">
+                  <span>✔</span>
+                  <div>
+                    <strong>Evidence-Based Treatments</strong>
+                    <p>
+                      We focus on clinically proven treatments that improve skin
+                      health safely and effectively.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 

@@ -15,6 +15,14 @@
   padding: 18px;
 }
 
+.concernsHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
 .cardHead {
   display: flex;
   align-items: center;
