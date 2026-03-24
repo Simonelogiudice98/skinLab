@@ -14,7 +14,7 @@ type Step = {
 const STEPS: Step[] = [
   {
     title: "CONSULTATION & SKIN ANALYSIS",
-    desc: "We start by understanding your skin concerns, history, lifestyle, and goals to create a personalized treatment plan.",
+    desc: "We start by understanding your skin concerns, history, lifestyle, and goals to create a personalised treatment plan.",
     Icon: Face4OutlinedIcon,
   },
   {

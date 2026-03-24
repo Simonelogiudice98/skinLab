@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
           <div className="heroCopy">
             <div className="pill">
               <Pill variant="light">
-                Medically led • Results driven • Personalized to you
+                Medically led • Results driven • Personalised to you
               </Pill>
             </div>
 
