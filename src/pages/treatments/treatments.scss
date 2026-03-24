@@ -51,22 +51,28 @@
 
 .treatTop {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+
+  h3 {
+    font-size: 15px; 
+  }
 }
 
 .priceFrom {
   font-weight: 900;
-  font-size: 12px;
-  padding: 6px 10px;
+  font-size: 11px; 
+  padding: 5px 9px;
   border-radius: 999px;
-  border: 1.5px solid #56555d;
-  color: #b8860b;
+  border: 1.5px solid rgba(183, 158, 122, 0.6);
+  color:#b8860b;
   position: relative;
   overflow: hidden;
   white-space: nowrap;
+  flex-shrink: 0; 
   cursor: pointer;
 
   &::after {
@@ -83,12 +89,10 @@
       transparent 100%
     );
     animation: none;
-    
   }
 
   &:hover::after {
     animation: shimmerPrice 2s ease forwards;
-    
   }
 }
 
