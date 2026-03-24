@@ -45,10 +45,10 @@ export default function TreatmentsSection({ treatments }: Props) {
 
                 <div className="treatHead">
                   <div className="treatTop">
+                    <h3 className={styles.h3}>{t.title}</h3>
                     {t.price?.label ? (
                       <span className="priceFrom">{t.price.label}</span>
                     ) : null}
-                    <h3 className={styles.h3}>{t.title}</h3>
                   </div>
                   {t.price?.note ? (
                     <div className="priceNote">
@@ -76,11 +76,6 @@ export default function TreatmentsSection({ treatments }: Props) {
                           <div className="treatRows">
                             {sec.items.map((it) => (
                               <div key={it.name} className="treatRow">
-                                {it.price ? (
-                                  <div className="treatRowPrice">
-                                    {it.price}
-                                  </div>
-                                ) : null}
                                 <div className="treatRowLeft">
                                   <div className="treatRowName">{it.name}</div>
                                   {it.details ? (
@@ -89,6 +84,11 @@ export default function TreatmentsSection({ treatments }: Props) {
                                     </div>
                                   ) : null}
                                 </div>
+                                {it.price ? (
+                                  <div className="treatRowPrice">
+                                    {it.price}
+                                  </div>
+                                ) : null}
                               </div>
                             ))}
                           </div>
