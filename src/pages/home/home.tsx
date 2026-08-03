@@ -1,7 +1,7 @@
 import Footer from "../footer/footer"
 import Header from "../header/header"
 import styles from '../../assets/commonStyles/commonStyles.module.scss';
-import { concerns, treatments } from "../../components/data/skinLab.data"
+import { concerns, treatmentsContent } from "../../components/data/skinLab.data"
 import AboutSection from "../about/about";
 import ConcernsSection from "../concerns/concerns";
 import TreatmentsSection from "../treatments/treatments";
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
 
       <ConcernsSection concerns={concerns} />
 
-      <TreatmentsSection treatments={treatments}/>
+      <TreatmentsSection content={treatmentsContent}/>
 
       <Footer/>
     </div>

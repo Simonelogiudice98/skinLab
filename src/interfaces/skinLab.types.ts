@@ -20,15 +20,69 @@ export type Bullet = {
   text: string;
 };
 
-export interface Treatment {
+export type IncludeItem = {
+  text: string;
+  note?: string;
+  strong?: boolean;
+};
+
+export type MetaBox = {
+  heading: string;
+  lines: string[];
+  note?: string;
+};
+
+export interface SignaturePlan {
+  badge: string;
   title: string;
-  description?: string;
-  price?: { label?: string; note?: string };
-  bullets?: { bold?: string; text: string }[];
-  sections?: { heading: string; items: { name: string; details?: string; price: string }[] }[];
-  image?: string;
-  badge?: React.ElementType;
-  isConsultation?: boolean;
+  price: string;
+  paragraphs: string[];
+  includesHeading: string;
+  includes: IncludeItem[];
+  sideBox: MetaBox;
+}
+
+export interface PlanCard {
+  title: string;
+  price: string;
+  description: string;
+  performedWith?: string;
+  includesHeading: string;
+  includes: IncludeItem[];
+  metaBoxes: MetaBox[];
+  footerNote: string;
+}
+
+export interface SessionCard {
+  title: string;
+  price: string;
+  description: string;
+  includesHeading: string;
+  includes: IncludeItem[];
+  highlightNote?: string;
+  duration: string;
+}
+
+export interface ConsultationBox {
+  title: string;
+  description: string;
+  boldNote: string;
+}
+
+export interface InfoList {
+  heading: string;
+  subtitle?: string;
+  items: string[];
+}
+
+export interface TreatmentsContent {
+  signaturePlan: SignaturePlan;
+  plansHeading: string;
+  plans: PlanCard[];
+  sessionsHeading: string;
+  sessions: SessionCard[];
+  consultation: ConsultationBox;
+  infoLists: InfoList[];
 }
 
 export interface SmartImageProps  {

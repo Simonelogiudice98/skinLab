@@ -1,4 +1,4 @@
-import type { Concern, Treatment } from "../../interfaces/skinLab.types.ts";
+import type { Concern, TreatmentsContent } from "../../interfaces/skinLab.types.ts";
 
 export const concerns: Concern[] = [
   {
@@ -29,121 +29,176 @@ export const concerns: Concern[] = [
   },
 ];
 
-export const treatments: Treatment[] = [
-  {
-    title: "Consultation & Skin Analysis",
+export const treatmentsContent: TreatmentsContent = {
+  signaturePlan: {
+    badge: "Signature Treatment Plan",
+    title: "Complete Skin Transformation Plan",
+    price: "£1,250",
+    paragraphs: [
+      "Our most comprehensive treatment plan combines clinical microneedling and medical-grade chemical peels to improve acne scarring, hyperpigmentation and uneven skin texture.",
+      "Using evidence-based Mesoestetic treatment protocols, your plan is tailored to your individual skin concerns to achieve safe, long-lasting results.",
+    ],
+    includesHeading: "Includes:",
+    includes: [
+      { text: "4 Clinical Microneedling treatments" },
+      {
+        text: "4 Clinical Chemical Peel sessions",
+        note: "Each peel is individually selected and adjusted throughout your treatment plan based on your skin's progress",
+      },
+      { text: "Personalised treatment planning" },
+      { text: "Progress photography" },
+      { text: "Clinical reviews" },
+      { text: "Homecare recommendations" },
+    ],
+    sideBox: {
+      heading: "Treatment Plan",
+      lines: ["8 treatments", "(4 microneedling & 4 chemical peel sessions)"],
+      note: "Additional treatments may be recommended depending on your skin goals.",
+    },
+  },
+
+  plansHeading: "Skin Treatment Plans",
+  plans: [
+    {
+      title: "Skin Clarity Plan",
+      price: "£540",
+      description:
+        "Designed for mild hyperpigmentation, post-inflammatory pigmentation and uneven skin tone.",
+      includesHeading: "Includes:",
+      includes: [
+        {
+          text: "4 Clinical Chemical Peel sessions",
+          note: "Each peel is individually selected and adjusted throughout your plan based on your skin's progress",
+        },
+        { text: "Personalised treatment plan" },
+        { text: "Progress reviews" },
+        { text: "Homecare recommendations" },
+      ],
+      metaBoxes: [
+        { heading: "Treatment Frequency", lines: ["Every 3–4 weeks"] },
+        { heading: "Treatment Plan", lines: ["4 treatments"] },
+      ],
+      footerNote:
+        "Most clients see significant improvement after 3–5 treatments. Your treatment plan will be tailored during your consultation.",
+    },
+    {
+      title: "Acne Scar Plan",
+      price: "£585",
+      description:
+        "Designed for mild to moderate acne scarring, enlarged pores and uneven skin texture.",
+      performedWith:
+        "Performed using the Mesoestetic Axion Professional Microneedling System.",
+      includesHeading: "Includes:",
+      includes: [
+        {
+          text: "3 Clinical Microneedling treatments",
+          note: "Includes treatment of the face and neck",
+        },
+        { text: "Personalised treatment plan" },
+        { text: "Progress reviews" },
+        { text: "Homecare recommendations" },
+      ],
+      metaBoxes: [
+        { heading: "Treatment Frequency", lines: ["Every 4–6 weeks"] },
+        { heading: "Treatment Plan", lines: ["3 treatments"] },
+      ],
+      footerNote:
+        "Based on your skin assessment, an additional 1–2 treatments may be recommended to achieve optimal results, in line with Mesoestetic treatment protocols.",
+    },
+    {
+      title: "Advanced Scar Revision Plan",
+      price: "£760",
+      description:
+        "Designed for moderate to advanced acne scarring and textural concerns.",
+      performedWith:
+        "Performed using the Mesoestetic Axion Professional Microneedling System.",
+      includesHeading: "Includes:",
+      includes: [
+        {
+          text: "4 Clinical Microneedling treatments",
+          note: "Includes treatment of the face and neck",
+        },
+        { text: "Personalised treatment plan" },
+        { text: "Progress reviews" },
+        { text: "Homecare recommendations" },
+      ],
+      metaBoxes: [
+        { heading: "Treatment Frequency", lines: ["Every 4–6 weeks"] },
+        { heading: "Treatment Plan", lines: ["4 treatments"] },
+      ],
+      footerNote:
+        "Some clients may benefit from a fifth treatment depending on scar severity and treatment response.",
+    },
+  ],
+
+  sessionsHeading: "Single Treatment Sessions",
+  sessions: [
+    {
+      title: "Clinical Chemical Peel",
+      price: "£140",
+      description:
+        "Every treatment begins with a skin assessment to determine the most appropriate Mesoestetic peel for your skin on the day of treatment. As your skin improves, your peel protocol may be adjusted to ensure you continue achieving the best possible results.",
+      includesHeading: "Includes:",
+      includes: [
+        { text: "Double cleanse" },
+        { text: "Clinical skin preparation" },
+        { text: "Bespoke Mesoestetic peel (selected for your skin on the day)" },
+        { text: "Crystal Fibre Mask" },
+        { text: "Fast Skin Repair" },
+        { text: "SPF 50 protection" },
+      ],
+      duration: "Treatment time: 60 minutes",
+    },
+    {
+      title: "Clinical Microneedling",
+      price: "£200",
+      description:
+        "Performed using the Mesoestetic Axion Professional Microneedling System to improve acne scarring, pigmentation and skin texture through collagen stimulation.",
+      includesHeading: "Includes:",
+      includes: [
+        { text: "Double cleanse" },
+        { text: "Clinical skin preparation" },
+        { text: "Professional Mesoestetic solution" },
+        { text: "Face and neck treatment", strong: true },
+        { text: "Personalised aftercare" },
+      ],
+      highlightNote:
+        "Every microneedling treatment includes treatment of the face and neck at no additional cost.",
+      duration: "Treatment time: 75 minutes",
+    },
+  ],
+
+  consultation: {
+    title: "Skin Consultation",
     description:
-      "Your skin journey begins with a comprehensive consultation where we assess your skin concerns, medical history and goals. This allows us to create a safe, personalised treatment plan.",
-    price: { label: "£50", note: "Redeemable against treatment" },
-    isConsultation: true,
+      "Your skin journey begins with a comprehensive consultation. We'll assess your skin concerns, review your medical history and create a personalised treatment plan tailored to your goals.",
+    boldNote:
+      "Consultation fee redeemable against treatment or plan booked within 30 days.",
   },
-  {
-    title: "Targeted Skin Transformation Programme",
-    description:
-      "Our most advanced programme designed to treat hyperpigmentation, acne scarring and uneven skin texture through a combination of medical microneedling and chemical peels.",
-    price: { label: "£1,450" },
-    sections: [
-      {
-        heading: "Includes",
-        items: [
-          { name: "4 microneedling treatments", price: "" },
-          { name: "4 medical chemical peels", price: "" },
-          { name: "Personalised treatment planning", price: "" },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Core Treatments",
-    sections: [
-      {
-        heading: "",
-        items: [
-          {
-            name: "Essential Skin Reset",
-            details:
-              "A barrier repair treatment designed to calm inflammation and restore skin balance.",
-            price: "£150",
-          },
-          {
-            name: "Medical Chemical Peel",
-            details:
-              "A personalised peel designed to improve pigmentation, clarity and overall skin tone.",
-            price: "£200",
-          },
-          {
-            name: "Medical Microneedling",
-            details:
-              "A collagen stimulating treatment that improves acne scarring, skin texture and overall skin quality.",
-            price: "£250",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Skin Programmes",
-    sections: [
-      {
-        heading: "",
-        items: [
-          {
-            name: "Skin Renewal Programme",
-            details:
-              "For mild hyperpigmentation and uneven tone.\nIncludes:\n· 4 medical chemical peels\n· Treatments every 3–4 weeks",
-            price: "£660",
-          },
-          {
-            name: "Skin Repair Programme",
-            details:
-              "For acne scarring and skin texture.\nIncludes:\n· 3 microneedling treatments\n· Treatments every 4–6 weeks",
-            price: "£690",
-          },
-          {
-            name: "Intensive Skin Remodelling Programme",
-            details:
-              "For deeper acne scarring and more advanced concerns.\nIncludes:\n· 4 microneedling treatments\n· Treatments every 4–6 weeks",
-            price: "£900",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Rosacea Programmes",
-    sections: [
-      {
-        heading: "",
-        items: [
-          {
-            name: "Skin Barrier Restoration",
-            details:
-              "Designed to calm inflammation and strengthen rosacea prone skin.\nIncludes:\n· 4 Essential Skin Reset treatments",
-            price: "£520",
-          },
-          {
-            name: "Advanced Rosacea Programme",
-            details:
-              "For persistent redness and reactive skin.\nIncludes:\n · 4 Essential Skin Reset treatments \n· 2 targeted clinical treatments",
-            price: "£820",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Maintenance Treatments",
-    description:
-      "Once your skin goals are achieved, maintenance treatments help preserve results and support long term skin health.",
-    sections: [
-      {
-        heading: "",
-        items: [
-          { name: "Chemical Peel", price: "£200" },
-          { name: "Microneedling", price: "£250" },
-          { name: "Essential Skin Reset", price: "£150" },
-        ],
-      },
-    ],
-  },
-];
+
+  infoLists: [
+    {
+      heading: "Why choose The Medical Skin Lab?",
+      items: [
+        "Registered Nurse-led Skin Clinic",
+        "Specialist in Acne Scarring & Hyperpigmentation",
+        "Medical-grade Mesoestetic products",
+        "Mesoestetic Axion Professional Microneedling System",
+        "Every chemical peel is tailored to your skin on the day of treatment",
+        "Crystal Fibre Mask included with every chemical peel",
+        "Face and neck included with every microneedling treatment",
+        "Evidence-based Mesoestetic treatment protocols",
+      ],
+    },
+    {
+      heading: "Preferred Client Benefits",
+      subtitle: "Clients who complete a Skin Treatment Plan receive:",
+      items: [
+        "10% Preferred Client Rate on all future individual maintenance treatments",
+        "Ongoing clinical skin reviews",
+        "Personalised homecare recommendations",
+        "Priority booking for maintenance appointments",
+      ],
+    },
+  ],
+};

@@ -1,28 +1,119 @@
 import styles from "../../assets/commonStyles/commonStyles.module.scss";
 import SectionTitle from "../../components/sectionTitle/sectionTitle";
 import "./treatments.scss";
-import type { Treatment } from "../../interfaces/skinLab.types";
-import { SmartImage } from "../../components/smartImage/smartImage";
+import type {
+  IncludeItem,
+  InfoList,
+  MetaBox,
+  TreatmentsContent,
+} from "../../interfaces/skinLab.types";
 import BookConsultationButton from "../../components/bookConsultationButton/BookConsultationButton";
 
+import StarIcon from "@mui/icons-material/Star";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+
 interface Props {
-  treatments: Treatment[];
+  content: TreatmentsContent;
 }
 
-function Paragraphs({ text }: { text: string }) {
-  if (!text) return null;
+function IncludeList({
+  heading,
+  items,
+  variant = "check",
+}: {
+  heading: string;
+  items: IncludeItem[];
+  variant?: "check" | "dash";
+}) {
   return (
-    <>
-      {text.split("\n\n").map((p) => (
-        <p key={p} className="cardText">
-          {p}
-        </p>
-      ))}
-    </>
+    <div className="treatIncludes">
+      <div className="treatIncludesHeading">{heading}</div>
+      <ul className={`treatIncludesList treatIncludesList--${variant}`}>
+        {items.map((item) => (
+          <li key={item.text} className="treatIncludeItem">
+            {variant === "check" ? (
+              <CheckCircleOutlineIcon
+                className="treatIncludeIcon"
+                aria-hidden="true"
+              />
+            ) : (
+              <span className="treatIncludeDash" aria-hidden="true">
+                ·
+              </span>
+            )}
+            <div>
+              <span
+                className={
+                  item.strong ? "treatIncludeText is-strong" : "treatIncludeText"
+                }
+              >
+                {item.text}
+              </span>
+              {item.note ? (
+                <em className="treatIncludeNote">{item.note}</em>
+              ) : null}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
-export default function TreatmentsSection({ treatments }: Props) {
+function MetaBoxRow({ box }: { box: MetaBox }) {
+  return (
+    <div className="treatMeta">
+      <CalendarMonthOutlinedIcon className="treatMetaIcon" aria-hidden="true" />
+      <div className="treatMetaBody">
+        <div className="treatMetaHeading">{box.heading}</div>
+        {box.lines.map((line) => (
+          <div key={line} className="treatMetaLine">
+            {line}
+          </div>
+        ))}
+        {box.note ? <p className="treatMetaNote">{box.note}</p> : null}
+      </div>
+    </div>
+  );
+}
+
+function InfoListCard({ list }: { list: InfoList }) {
+  return (
+    <div className="treatInfoCard">
+      <h3 className="treatInfoHeading">{list.heading}</h3>
+      {list.subtitle ? (
+        <p className="treatInfoSubtitle">{list.subtitle}</p>
+      ) : null}
+      <ul className="treatIncludesList treatIncludesList--check">
+        {list.items.map((item) => (
+          <li key={item} className="treatIncludeItem">
+            <CheckCircleOutlineIcon
+              className="treatIncludeIcon"
+              aria-hidden="true"
+            />
+            <div>
+              <span className="treatIncludeText">{item}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default function TreatmentsSection({ content }: Props) {
+  const {
+    signaturePlan,
+    plansHeading,
+    plans,
+    sessionsHeading,
+    sessions,
+    consultation,
+    infoLists,
+  } = content;
+
   return (
     <section id="treatments" className={styles.section}>
       <div className={styles.container}>
@@ -33,76 +124,121 @@ export default function TreatmentsSection({ treatments }: Props) {
             subtitle="Medically led. Results driven. Personalised to you."
           />
 
-          <div className="grid2">
-            {treatments.map((t) => (
-              <article key={t.title} className={`${styles.card} treatCard`}>
-                {t.image ? (
-                  <div className="cardMedia" aria-hidden="true">
-                    <SmartImage src={t.image} alt="" className="cardMediaImg" />
-                    <div className="cardMediaOverlay" />
+          <article className={`${styles.card} signatureCard`}>
+            <div className="signatureTop">
+              <div className="signatureHead">
+                <div className="signatureBadge">
+                  <StarIcon className="signatureBadgeIcon" aria-hidden="true" />
+                  {signaturePlan.badge}
+                </div>
+                <h3 className="signatureTitle">{signaturePlan.title}</h3>
+              </div>
+              <span className="priceFrom">{signaturePlan.price}</span>
+            </div>
+
+            <div className="signatureBody">
+              <div className="signatureMain">
+                {signaturePlan.paragraphs.map((p) => (
+                  <p key={p} className="cardText">
+                    {p}
+                  </p>
+                ))}
+
+                <IncludeList
+                  heading={signaturePlan.includesHeading}
+                  items={signaturePlan.includes}
+                />
+              </div>
+
+              <aside className="signatureSide">
+                <MetaBoxRow box={signaturePlan.sideBox} />
+              </aside>
+            </div>
+          </article>
+
+          <h3 className="treatGroupHeading">{plansHeading}</h3>
+          <div className="planGrid">
+            {plans.map((plan) => (
+              <article
+                key={plan.title}
+                className={`${styles.card} treatCard planCard`}
+              >
+                <div className="treatTop">
+                  <h4 className={styles.h3}>{plan.title}</h4>
+                  <span className="priceFrom">{plan.price}</span>
+                </div>
+
+                <p className="cardText">{plan.description}</p>
+                {plan.performedWith ? (
+                  <p className="cardText">{plan.performedWith}</p>
+                ) : null}
+
+                <IncludeList
+                  heading={plan.includesHeading}
+                  items={plan.includes}
+                />
+
+                <div className="treatMetaGroup">
+                  {plan.metaBoxes.map((box) => (
+                    <MetaBoxRow key={box.heading} box={box} />
+                  ))}
+                </div>
+
+                <p className="treatFooterNote">{plan.footerNote}</p>
+              </article>
+            ))}
+          </div>
+
+          <h3 className="treatGroupHeading">{sessionsHeading}</h3>
+          <div className="sessionGrid">
+            {sessions.map((session) => (
+              <article
+                key={session.title}
+                className={`${styles.card} treatCard sessionCard`}
+              >
+                <div className="treatTop">
+                  <h4 className={styles.h3}>{session.title}</h4>
+                  <span className="priceFrom">{session.price}</span>
+                </div>
+
+                <p className="cardText">{session.description}</p>
+
+                <IncludeList
+                  heading={session.includesHeading}
+                  items={session.includes}
+                  variant="dash"
+                />
+
+                {session.highlightNote ? (
+                  <div className="sessionHighlight">
+                    <CheckCircleOutlineIcon
+                      className="treatIncludeIcon"
+                      aria-hidden="true"
+                    />
+                    <p>{session.highlightNote}</p>
                   </div>
                 ) : null}
 
-                <div className="treatHead">
-                  <div className="treatTop">
-                    <h3 className={styles.h3}>{t.title}</h3>
-                    {t.price?.label ? (
-                      <span className="priceFrom">{t.price.label}</span>
-                    ) : null}
-                  </div>
-                  {t.price?.note ? (
-                    <div className="priceNote">
-                      <strong>
-                        <em>{t.price.note}</em>
-                      </strong>
-                    </div>
-                  ) : null}
-                </div>
-
-                <div className="treatBody">
-                  <Paragraphs text={t.description ?? ""} />
-
-                  {t.sections?.length
-                    ? t.sections.map((sec) => (
-                        <div
-                          key={sec.heading ?? "default"}
-                          className="treatSection"
-                        >
-                          {sec.heading ? (
-                            <div className="treatSectionTitle">
-                              {sec.heading}
-                            </div>
-                          ) : null}
-                          <div className="treatRows">
-                            {sec.items.map((it) => (
-                              <div key={it.name} className="treatRow">
-                                <div className="treatRowLeft">
-                                  <div className="treatRowName">{it.name}</div>
-                                  {it.details ? (
-                                    <div className="treatRowDetails">
-                                      {it.details}
-                                    </div>
-                                  ) : null}
-                                </div>
-                                {it.price ? (
-                                  <div className="treatRowPrice">
-                                    {it.price}
-                                  </div>
-                                ) : null}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      ))
-                    : null}
-
-                  {t.isConsultation && (
-                    <div className="consultationCta">
-                      <BookConsultationButton />
-                    </div>
-                  )}
+                <div className="sessionDuration">
+                  <AccessTimeIcon
+                    className="sessionDurationIcon"
+                    aria-hidden="true"
+                  />
+                  <span>{session.duration}</span>
                 </div>
               </article>
+            ))}
+          </div>
+
+          <div className="consultationBox">
+            <h3 className="consultationTitle">{consultation.title}</h3>
+            <p className="cardText">{consultation.description}</p>
+            <p className="consultationNote">{consultation.boldNote}</p>
+          </div>
+
+          <div className="treatInfoGrid">
+            {infoLists.map((list) => (
+              <InfoListCard key={list.heading} list={list} />
             ))}
           </div>
 
