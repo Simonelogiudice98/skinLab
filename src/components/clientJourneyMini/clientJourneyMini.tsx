@@ -1,9 +1,8 @@
 import "./clientJourneyMini.scss";
 
 import Face4OutlinedIcon from "@mui/icons-material/Face4Outlined";
-import HubOutlinedIcon from "@mui/icons-material/HubOutlined";
-import TaskAltOutlinedIcon from "@mui/icons-material/TaskAltOutlined";
-import AutoAwesomeOutlinedIcon from "@mui/icons-material/AutoAwesomeOutlined";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
+import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 
 type Step = {
   title: string;
@@ -13,31 +12,26 @@ type Step = {
 
 const STEPS: Step[] = [
   {
-    title: "CONSULTATION & SKIN ANALYSIS",
-    desc: "We start by understanding your skin concerns, history, lifestyle, and goals to create a personalised treatment plan.",
+    title: "Consultation",
+    desc: "Your journey begins with a comprehensive skin consultation and personalised treatment plan.",
     Icon: Face4OutlinedIcon,
   },
   {
-    title: "TARGETED CLINICAL TREATMENTS",
-    desc: "Based on your assessment, we introduce treatments like essential skin facial, chemical peels and microneedling gradually to calm inflammation, strengthen your skin, and address concerns safely.",
-    Icon: HubOutlinedIcon,
+    title: "Treatment Plan",
+    desc: "Most clients achieve the best and most consistent results through a personalised course of 3–5 treatments, depending on your skin concerns.",
+    Icon: SettingsOutlinedIcon,
   },
   {
-    title: "PROGRESS REVIEW",
-    desc: "Regular reviews ensure treatments stay effective and are adjusted as your skin improves.",
-    Icon: TaskAltOutlinedIcon,
-  },
-  {
-    title: "MAINTENANCE & OPTIMISATION",
-    desc: "After reaching your goals, maintenance treatments and tailored skincare help preserve results and support long-term skin health.",
-    Icon: AutoAwesomeOutlinedIcon,
+    title: "Maintenance",
+    desc: "Once your desired results have been achieved, maintenance treatments are recommended every 2–3 months to help maintain your results and support long-term skin health.",
+    Icon: CalendarMonthOutlinedIcon,
   },
 ];
 
 export default function ClientJourneyMini() {
   return (
-    <section className="journeyMini" aria-label="SkinLab Medical client journey">
-      <h2 className="journeyMiniHeading">THE SKINLAB MEDICAL CLIENT JOURNEY</h2>
+    <section className="journeyMini" aria-label="Your Skin Journey">
+      <h2 className="journeyMiniHeading">Your Skin Journey</h2>
 
       <div className="journeyMiniGrid">
         {STEPS.map(({ title, desc, Icon }) => (
@@ -52,8 +46,6 @@ export default function ClientJourneyMini() {
           </article>
         ))}
       </div>
-
-      <p className="journeyMiniTagline">Personalised. Progressive. Medically led.</p>
     </section>
   );
 }
