@@ -43,15 +43,14 @@
 }
 
 .journeyMiniIcon {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   display: grid;
   place-items: center;
 
-  background: rgba(242, 241, 237, 0.9);
-  border: 1px solid rgba(42, 42, 42, 0.12);
-  color: rgba(42, 42, 42, 0.82);
+  background: rgba(183, 158, 122, 0.18);
+  color: rgba(42, 42, 42, 0.85);
 }
 
 .journeyMiniIconSvg {

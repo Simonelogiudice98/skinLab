@@ -1,8 +1,6 @@
 import "./clientJourneyMini.scss";
 
-import Face4OutlinedIcon from "@mui/icons-material/Face4Outlined";
-import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
+import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 
 type Step = {
   title: string;
@@ -10,21 +8,69 @@ type Step = {
   Icon: React.ElementType;
 };
 
+/* Ring of dots around a centre dot, as in the client's reference. */
+function DotsRingIcon({ className }: { className?: string }) {
+  const dots = Array.from({ length: 8 }, (_, i) => {
+    const angle = (i * Math.PI) / 4;
+    return {
+      cx: 12 + Math.cos(angle) * 7,
+      cy: 12 + Math.sin(angle) * 7,
+    };
+  });
+
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      width="1em"
+      height="1em"
+      fill="currentColor"
+    >
+      {dots.map((d) => (
+        <circle key={`${d.cx}-${d.cy}`} cx={d.cx} cy={d.cy} r="1.35" />
+      ))}
+      <circle cx="12" cy="12" r="1.9" />
+    </svg>
+  );
+}
+
+/* Calendar with a diagonal arrow inside, as in the client's reference. */
+function CalendarArrowIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      width="1em"
+      height="1em"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="3.5" y="5" width="17" height="15.5" rx="3" />
+      <path d="M3.5 9.5h17" />
+      <path d="M8 3.5v3M16 3.5v3" />
+      <path d="M9.5 17l5-4M14.5 13h-3M14.5 13v3" />
+    </svg>
+  );
+}
+
 const STEPS: Step[] = [
   {
     title: "Consultation",
     desc: "Your journey begins with a comprehensive skin consultation and personalised treatment plan.",
-    Icon: Face4OutlinedIcon,
+    Icon: PersonRoundedIcon,
   },
   {
     title: "Treatment Plan",
     desc: "Most clients achieve the best and most consistent results through a personalised course of 3–5 treatments, depending on your skin concerns.",
-    Icon: SettingsOutlinedIcon,
+    Icon: DotsRingIcon,
   },
   {
     title: "Maintenance",
     desc: "Once your desired results have been achieved, maintenance treatments are recommended every 2–3 months to help maintain your results and support long-term skin health.",
-    Icon: CalendarMonthOutlinedIcon,
+    Icon: CalendarArrowIcon,
   },
 ];
 
