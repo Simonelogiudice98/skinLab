@@ -40,7 +40,7 @@
   font-size: 11px;
   padding: 5px 9px;
   border-radius: 999px;
-  border: 1.5px solid #56555d;
+  border: 1.5px solid #b8860b;
   color: #b8860b;
   position: relative;
   overflow: hidden;
@@ -188,10 +188,14 @@
 }
 
 .treatMetaIcon {
-  font-size: 18px !important;
-  color: rgba(42, 42, 42, 0.7);
+  font-size: 17px !important;
+  color: rgba(42, 42, 42, 0.75);
   flex-shrink: 0;
-  margin-top: 1px;
+
+  box-sizing: content-box;
+  padding: 7px;
+  border-radius: 50%;
+  background: rgba(183, 158, 122, 0.22);
 }
 
 .treatMetaBody {
@@ -361,7 +365,7 @@
 
 .sessionDurationIcon {
   font-size: 16px !important;
-  color: rgba(42, 42, 42, 0.6);
+  color: #b8860b;
 }
 
 /* ---------- consultation box ---------- */
