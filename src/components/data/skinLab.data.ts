@@ -33,10 +33,10 @@ export const treatmentsContent: TreatmentsContent = {
   signaturePlan: {
     badge: "Signature Treatment Plan",
     title: "Complete Skin Transformation Plan",
-    price: "£1,250",
+    price: "£1,350",
     paragraphs: [
-      "Our most comprehensive treatment plan combines clinical microneedling and medical-grade chemical peels to improve acne scarring, hyperpigmentation and uneven skin texture.",
-      "Using evidence-based Mesoestetic treatment protocols, your plan is tailored to your individual skin concerns to achieve safe, long-lasting results.",
+      "Our most comprehensive treatment plan combines clinical microneedling and medical grade chemical peels to improve acne scarring, hyperpigmentation and uneven skin texture.",
+      "Using evidence based Mesoestetic treatment protocols, your plan is tailored to your individual skin concerns to achieve safe, long-lasting results.",
     ],
     includesHeading: "Includes:",
     includes: [
@@ -180,14 +180,14 @@ export const treatmentsContent: TreatmentsContent = {
     {
       heading: "Why choose The Medical Skin Lab?",
       items: [
-        "Registered Nurse-led Skin Clinic",
+        "Registered Nurse led Skin Clinic",
         "Specialist in Acne Scarring & Hyperpigmentation",
-        "Medical-grade Mesoestetic products",
+        "Medical grade Mesoestetic products",
         "Mesoestetic Axion Professional Microneedling System",
         "Every chemical peel is tailored to your skin on the day of treatment",
         "Crystal Fibre Mask included with every chemical peel",
         "Face and neck included with every microneedling treatment",
-        "Evidence-based Mesoestetic treatment protocols",
+        "Evidence based Mesoestetic treatment protocols",
       ],
     },
     {

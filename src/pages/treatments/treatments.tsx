@@ -118,11 +118,7 @@ export default function TreatmentsSection({ content }: Props) {
     <section id="treatments" className={styles.section}>
       <div className={styles.container}>
         <div className={styles.panel}>
-          <SectionTitle
-            overline="Treatments"
-            title="Treatment Menu"
-            subtitle="Medically led. Results driven. Personalised to you."
-          />
+          <SectionTitle overline="Treatments" title="Treatment Menu" />
 
           <article className={`${styles.card} signatureCard`}>
             <div className="signatureTop">

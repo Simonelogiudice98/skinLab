@@ -38,7 +38,7 @@ const AboutSection: React.FC = () => {
                 <div className="checkItem">
                   <span>✔</span>
                   <div>
-                    <strong>Nurse-Led Expertise</strong>
+                    <strong>Nurse Led Expertise</strong>
                     <p>
                       All treatments are performed by a registered nurse with
                       clinical experience and advanced aesthetic training.
@@ -58,7 +58,7 @@ const AboutSection: React.FC = () => {
                 <div className="checkItem">
                   <span>✔</span>
                   <div>
-                    <strong>Evidence-Based Treatments</strong>
+                    <strong>Evidence Based Treatments</strong>
                     <p>
                       We focus on clinically proven treatments that improve skin
                       health safely and effectively.
