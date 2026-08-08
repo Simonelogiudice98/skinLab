@@ -69,7 +69,7 @@ const STEPS: Step[] = [
   },
   {
     title: "Maintenance",
-    desc: "Once your desired results have been achieved, maintenance treatments are recommended every 2–3 months to help maintain your results and support long-term skin health.",
+    desc: "Once your desired results have been achieved, maintenance treatments are recommended every 2–3 months to help maintain your results and support long term skin health.",
     Icon: CalendarArrowIcon,
   },
 ];

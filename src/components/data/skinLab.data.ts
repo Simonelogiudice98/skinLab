@@ -36,7 +36,7 @@ export const treatmentsContent: TreatmentsContent = {
     price: "£1,350",
     paragraphs: [
       "Our most comprehensive treatment plan combines clinical microneedling and medical grade chemical peels to improve acne scarring, hyperpigmentation and uneven skin texture.",
-      "Using evidence based Mesoestetic treatment protocols, your plan is tailored to your individual skin concerns to achieve safe, long-lasting results.",
+      "Using evidence based Mesoestetic treatment protocols, your plan is tailored to your individual skin concerns to achieve safe, long lasting results.",
     ],
     includesHeading: "Includes:",
     includes: [
@@ -63,7 +63,7 @@ export const treatmentsContent: TreatmentsContent = {
       title: "Skin Clarity Plan",
       price: "£540",
       description:
-        "Designed for mild hyperpigmentation, post-inflammatory pigmentation and uneven skin tone.",
+        "Designed for mild hyperpigmentation, post inflammatory pigmentation and uneven skin tone.",
       includesHeading: "Includes:",
       includes: [
         {
@@ -198,7 +198,7 @@ export const treatmentsContent: TreatmentsContent = {
       "Exclusive membership for clients who complete a Skin Treatment Plan.",
     intro: [
       "Your treatment plan is just the beginning.",
-      "Once you've completed your personalised Skin Treatment Plan, you'll be welcomed into The Medical Skin Lab Circle—our exclusive membership designed to support your skin long after your treatment plan ends.",
+      "Once you've completed your personalised Skin Treatment Plan, you'll be welcomed into The Medical Skin Lab Circle our exclusive membership designed to support your skin long after your treatment plan ends.",
     ],
     benefitsHeading: "As a Circle Member, you'll enjoy:",
     benefits: [
