@@ -280,9 +280,20 @@ export default function TreatmentsSection({ content }: Props) {
               <div>
                 <p className="ctaTitle">Our Approach</p>
                 <p>
-                  We prioritise skin preparation, safety and a progressive
-                  treatment plan. Results are achieved gradually, with a focus
-                  on long term skin health rather than quick fixes.
+                  At The Medical Skin Lab, we believe healthy skin is achieved
+                  through consistency, not quick fixes.
+                </p>
+                <p>
+                  Every treatment plan begins with a comprehensive consultation
+                  and is tailored using evidence based Mesoestetic treatment
+                  protocols. As your skin changes throughout your journey, your
+                  treatment plan evolves too, ensuring every appointment is
+                  personalised to achieve safe, effective and long lasting
+                  results.
+                </p>
+                <p>
+                  Our focus is simple: healthy skin, long term results and
+                  expert clinical care.
                 </p>
               </div>
               <div>
