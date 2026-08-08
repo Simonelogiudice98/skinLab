@@ -8,6 +8,12 @@
   }
 }
 
+/* Visual test: the concern cards sit white on the page rather than blending
+   into it, as the Treatment Menu cards do. Border and shadow are unchanged. */
+#concerns .grid1 > article {
+  background: #fff;
+}
+
 .card {
   border-radius: 18px;
   border: 1px solid rgba(42, 42, 42, 0.12);

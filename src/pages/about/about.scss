@@ -26,7 +26,8 @@
 .checklist {
   border-radius: 18px;
   border: 1px solid rgba(42, 42, 42, 0.12);
-  background: rgba(227, 226, 221, 0);
+  /* Visual test: white instead of transparent, so the box reads as a card. */
+  background: #fff;
   padding: 20px;
   display: grid;
   gap: 14px;
