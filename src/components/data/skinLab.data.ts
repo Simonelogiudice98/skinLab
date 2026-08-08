@@ -190,15 +190,28 @@ export const treatmentsContent: TreatmentsContent = {
         "Evidence based Mesoestetic treatment protocols",
       ],
     },
-    {
-      heading: "Preferred Client Benefits",
-      subtitle: "Clients who complete a Skin Treatment Plan receive:",
-      items: [
-        "10% Preferred Client Rate on all future individual maintenance treatments",
-        "Ongoing clinical skin reviews",
-        "Personalised homecare recommendations",
-        "Priority booking for maintenance appointments",
-      ],
-    },
   ],
+
+  membership: {
+    heading: "The Medical Skin Lab Circle",
+    subtitle:
+      "Exclusive membership for clients who complete a Skin Treatment Plan.",
+    intro: [
+      "Your treatment plan is just the beginning.",
+      "Once you've completed your personalised Skin Treatment Plan, you'll be welcomed into The Medical Skin Lab Circle—our exclusive membership designed to support your skin long after your treatment plan ends.",
+    ],
+    benefitsHeading: "As a Circle Member, you'll enjoy:",
+    benefits: [
+      "10% Member Pricing on all individual maintenance treatments",
+      "Complimentary Annual Clinical Skin Review",
+      "Priority Booking for maintenance appointments",
+      "Personalised Homecare Recommendations",
+      "Birthday Glow Gift",
+      "Exclusive Christmas Thank You Gift",
+      "Complimentary Progress Photography during your maintenance appointments",
+    ],
+    membershipHeading: "Membership",
+    membershipText:
+      "Membership is complimentary and exclusively available to clients who successfully complete a Medical Skin Lab Skin Treatment Plan.",
+  },
 };

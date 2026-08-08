@@ -75,6 +75,16 @@ export interface InfoList {
   items: string[];
 }
 
+export interface Membership {
+  heading: string;
+  subtitle: string;
+  intro: string[];
+  benefitsHeading: string;
+  benefits: string[];
+  membershipHeading: string;
+  membershipText: string;
+}
+
 export interface TreatmentsContent {
   signaturePlan: SignaturePlan;
   plansHeading: string;
@@ -83,6 +93,7 @@ export interface TreatmentsContent {
   sessions: SessionCard[];
   consultation: ConsultationBox;
   infoLists: InfoList[];
+  membership: Membership;
 }
 
 export interface SmartImageProps  {

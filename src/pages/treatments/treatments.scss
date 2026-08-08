@@ -427,6 +427,23 @@
   color: rgba(42, 42, 42, 0.7);
 }
 
+.treatInfoText {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(42, 42, 42, 0.72);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.treatDivider {
+  height: 1px;
+  background: rgba(42, 42, 42, 0.16);
+  margin: 16px 0;
+}
+
 /* ---------- bottom CTA ---------- */
 
 .ctaRow {

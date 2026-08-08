@@ -4,6 +4,7 @@ import "./treatments.scss";
 import type {
   IncludeItem,
   InfoList,
+  Membership,
   MetaBox,
   TreatmentsContent,
 } from "../../interfaces/skinLab.types";
@@ -79,6 +80,24 @@ function MetaBoxRow({ box }: { box: MetaBox }) {
   );
 }
 
+function CheckList({ items }: { items: string[] }) {
+  return (
+    <ul className="treatIncludesList treatIncludesList--check">
+      {items.map((item) => (
+        <li key={item} className="treatIncludeItem">
+          <CheckCircleOutlineIcon
+            className="treatIncludeIcon"
+            aria-hidden="true"
+          />
+          <div>
+            <span className="treatIncludeText">{item}</span>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function InfoListCard({ list }: { list: InfoList }) {
   return (
     <div className="treatInfoCard">
@@ -86,19 +105,32 @@ function InfoListCard({ list }: { list: InfoList }) {
       {list.subtitle ? (
         <p className="treatInfoSubtitle">{list.subtitle}</p>
       ) : null}
-      <ul className="treatIncludesList treatIncludesList--check">
-        {list.items.map((item) => (
-          <li key={item} className="treatIncludeItem">
-            <CheckCircleOutlineIcon
-              className="treatIncludeIcon"
-              aria-hidden="true"
-            />
-            <div>
-              <span className="treatIncludeText">{item}</span>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <CheckList items={list.items} />
+    </div>
+  );
+}
+
+function MembershipCard({ membership }: { membership: Membership }) {
+  return (
+    <div className="treatInfoCard">
+      <h3 className="treatInfoHeading">{membership.heading}</h3>
+      <p className="treatInfoSubtitle">{membership.subtitle}</p>
+
+      {membership.intro.map((p) => (
+        <p key={p} className="treatInfoText">
+          {p}
+        </p>
+      ))}
+
+      <div className="treatDivider" />
+
+      <div className="treatIncludesHeading">{membership.benefitsHeading}</div>
+      <CheckList items={membership.benefits} />
+
+      <div className="treatDivider" />
+
+      <div className="treatIncludesHeading">{membership.membershipHeading}</div>
+      <p className="treatInfoText">{membership.membershipText}</p>
     </div>
   );
 }
@@ -112,6 +144,7 @@ export default function TreatmentsSection({ content }: Props) {
     sessions,
     consultation,
     infoLists,
+    membership,
   } = content;
 
   return (
@@ -236,6 +269,7 @@ export default function TreatmentsSection({ content }: Props) {
             {infoLists.map((list) => (
               <InfoListCard key={list.heading} list={list} />
             ))}
+            <MembershipCard membership={membership} />
           </div>
 
           <div className="ctaRow">
