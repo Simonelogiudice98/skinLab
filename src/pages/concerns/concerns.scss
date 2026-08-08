@@ -12,6 +12,35 @@
    into it, as the Treatment Menu cards do. Border and shadow are unchanged. */
 #concerns .grid1 > article {
   background: #fff;
+
+  /* Same light lift as the Your Skin Journey cards. */
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 50px rgba(42, 42, 42, 0.1);
+    border-color: rgba(183, 158, 122, 0.4);
+
+    .iconBadge {
+      background: rgba(183, 158, 122, 0.3);
+    }
+  }
+}
+
+.iconBadge {
+  transition: background 0.18s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #concerns .grid1 > article,
+  .iconBadge {
+    transition: none;
+  }
+
+  #concerns .grid1 > article:hover {
+    transform: none;
+  }
 }
 
 .card {
