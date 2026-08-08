@@ -72,7 +72,30 @@ const STEPS: Step[] = [
     desc: "Once your desired results have been achieved, maintenance treatments are recommended every 2–3 months to help maintain your results and support long term skin health.",
     Icon: CalendarArrowIcon,
   },
+  {
+    title: "The Medical Skin Lab Circle",
+    desc: "Enjoy exclusive member benefits and ongoing clinical support as part of your long term skin journey.",
+    Icon: CircleIcon,
+  },
 ];
+
+/* Full circle, as the client suggested for the Circle membership card. */
+function CircleIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      width="1em"
+      height="1em"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+    >
+      <circle cx="12" cy="12" r="8.5" />
+      <circle cx="12" cy="12" r="3.5" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
 
 export default function ClientJourneyMini() {
   return (
