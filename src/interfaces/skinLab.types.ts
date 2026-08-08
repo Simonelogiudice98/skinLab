@@ -65,6 +65,7 @@ export interface SessionCard {
 
 export interface ConsultationBox {
   title: string;
+  price: string;
   description: string;
   boldNote: string;
 }

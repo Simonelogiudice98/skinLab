@@ -379,9 +379,24 @@
 
 .consultationTitle {
   margin: 0;
-  font-size: 18px;
   letter-spacing: -0.2px;
   color: rgba(0, 0, 0, 0.88);
+}
+
+/* The title keeps its larger size, and the price stays alongside it even
+   on narrow screens: "Skin Consultation" is short enough to share the row. */
+.consultationBox .treatTop {
+  align-items: center;
+
+  h3 {
+    font-size: 18px;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 .consultationNote {

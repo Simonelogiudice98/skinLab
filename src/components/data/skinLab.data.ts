@@ -170,6 +170,7 @@ export const treatmentsContent: TreatmentsContent = {
 
   consultation: {
     title: "Skin Consultation",
+    price: "£50",
     description:
       "Your skin journey begins with a comprehensive consultation. We'll assess your skin concerns, review your medical history and create a personalised treatment plan tailored to your goals.",
     boldNote:

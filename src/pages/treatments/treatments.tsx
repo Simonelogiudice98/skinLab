@@ -260,7 +260,10 @@ export default function TreatmentsSection({ content }: Props) {
           </div>
 
           <div className="consultationBox">
-            <h3 className="consultationTitle">{consultation.title}</h3>
+            <div className="treatTop">
+              <h3 className="consultationTitle">{consultation.title}</h3>
+              <span className="priceFrom">{consultation.price}</span>
+            </div>
             <p className="cardText">{consultation.description}</p>
             <p className="consultationNote">{consultation.boldNote}</p>
           </div>
