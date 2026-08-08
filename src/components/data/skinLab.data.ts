@@ -159,7 +159,7 @@ export const treatmentsContent: TreatmentsContent = {
         { text: "Double cleanse" },
         { text: "Clinical skin preparation" },
         { text: "Professional Mesoestetic solution" },
-        { text: "Face and neck treatment", strong: true },
+        { text: "Face and neck treatment" },
         { text: "Personalised aftercare" },
       ],
       highlightNote:
