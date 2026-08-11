@@ -75,12 +75,13 @@ const STEPS: Step[] = [
   {
     title: "The Medical Skin Lab Circle",
     desc: "Enjoy exclusive member benefits and ongoing clinical support as part of your long term skin journey.",
-    Icon: CircleIcon,
+    Icon: OrbitCircleIcon,
   },
 ];
 
-/* Full circle, as the client suggested for the Circle membership card. */
-function CircleIcon({ className }: { className?: string }) {
+/* Orbit circle for the Circle membership card: a hand drawn ring left open at
+   the bottom, with a second stroke overshooting it, around three dots. */
+function OrbitCircleIcon({ className }: { className?: string }) {
   return (
     <svg
       className={className}
@@ -89,10 +90,21 @@ function CircleIcon({ className }: { className?: string }) {
       height="1em"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.6"
+      strokeLinecap="round"
     >
-      <circle cx="12" cy="12" r="8.5" />
-      <circle cx="12" cy="12" r="3.5" fill="currentColor" stroke="none" />
+      <path
+        d="M10.52 20.37 A 8.5 8.5 0 1 1 16.25 19.36"
+        strokeWidth="1.4"
+      />
+      <path
+        d="M2.94 10.4 A 9.2 9.2 0 0 1 8.85 3.35"
+        strokeWidth="1.1"
+      />
+      <g fill="currentColor" stroke="none">
+        <circle cx="12" cy="8.8" r="1.1" />
+        <circle cx="12" cy="12" r="1.1" />
+        <circle cx="12" cy="15.2" r="1.1" />
+      </g>
     </svg>
   );
 }
