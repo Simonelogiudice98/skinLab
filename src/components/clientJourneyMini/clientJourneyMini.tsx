@@ -85,20 +85,22 @@ const STEPS: Step[] = [
 function OrbitCircleIcon({ className }: { className?: string }) {
   return (
     <svg
-      className={className}
-      viewBox="0 0 24 24"
+      className={`${className ?? ""} journeyMiniIconOrbit`}
+      /* Cropped to the drawing so the thin ring is not padded like the
+         filled glyphs are. */
+      viewBox="1.6 1.6 21.2 21.3"
       width="1em"
       height="1em"
       fill="none"
       stroke="currentColor"
       strokeLinecap="round"
     >
-      <path d="M9.13 4.11 A 8.4 8.4 0 1 1 7.18 5.12" strokeWidth="1.3" />
-      <path d="M12.78 20.96 A 9 9 0 0 1 4.21 16.5" strokeWidth="1" />
+      <path d="M8.72 2.98 A 9.6 9.6 0 1 1 6.49 4.14" strokeWidth="1.3" />
+      <path d="M12.89 22.16 A 10.2 10.2 0 0 1 3.17 17.1" strokeWidth="1" />
       <g fill="currentColor" stroke="none">
-        <circle cx="12" cy="9.6" r="1.05" />
-        <circle cx="12" cy="12" r="1.05" />
-        <circle cx="12" cy="14.4" r="1.05" />
+        <circle cx="12" cy="9.1" r="1.35" />
+        <circle cx="12" cy="12" r="1.35" />
+        <circle cx="12" cy="14.9" r="1.35" />
       </g>
     </svg>
   );

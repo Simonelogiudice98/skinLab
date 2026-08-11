@@ -53,6 +53,10 @@
     font-size: 19px;
   }
 
+  .journeyMiniIconOrbit {
+    font-size: 27px;
+  }
+
   .journeyMiniTitle {
     margin: 10px 0 8px;
     font-size: 12px;
@@ -98,6 +102,12 @@
 
 .journeyMiniIconSvg {
   font-size: 22px;
+}
+
+/* The orbit ring is a thin outline, so it needs to run larger than the filled
+   glyphs to carry the same weight. */
+.journeyMiniIconOrbit {
+  font-size: 32px;
 }
 
 .journeyMiniTitle {
