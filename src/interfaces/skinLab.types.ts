@@ -90,6 +90,7 @@ export interface TreatmentsContent {
   signaturePlan: SignaturePlan;
   plansHeading: string;
   plans: PlanCard[];
+  plansBenefits: InfoList;
   sessionsHeading: string;
   sessions: SessionCard[];
   consultation: ConsultationBox;

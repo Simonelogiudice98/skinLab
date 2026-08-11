@@ -131,6 +131,17 @@ export const treatmentsContent: TreatmentsContent = {
     },
   ],
 
+  plansBenefits: {
+    heading: "Preferred Client Benefits",
+    subtitle: "Clients who complete a Skin Treatment Plan receive:",
+    items: [
+      "10% Preferred Client Rate on all future individual maintenance treatments",
+      "Ongoing clinical skin reviews",
+      "Personalised homecare recommendations",
+      "Priority booking for maintenance appointments",
+    ],
+  },
+
   sessionsHeading: "Single Treatment Sessions",
   sessions: [
     {

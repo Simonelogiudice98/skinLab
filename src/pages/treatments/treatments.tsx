@@ -98,9 +98,15 @@ function CheckList({ items }: { items: string[] }) {
   );
 }
 
-function InfoListCard({ list }: { list: InfoList }) {
+function InfoListCard({
+  list,
+  className,
+}: {
+  list: InfoList;
+  className?: string;
+}) {
   return (
-    <div className="treatInfoCard">
+    <div className={className ? `treatInfoCard ${className}` : "treatInfoCard"}>
       <h3 className="treatInfoHeading">{list.heading}</h3>
       {list.subtitle ? (
         <p className="treatInfoSubtitle">{list.subtitle}</p>
@@ -140,6 +146,7 @@ export default function TreatmentsSection({ content }: Props) {
     signaturePlan,
     plansHeading,
     plans,
+    plansBenefits,
     sessionsHeading,
     sessions,
     consultation,
@@ -216,6 +223,11 @@ export default function TreatmentsSection({ content }: Props) {
                 <p className="treatFooterNote">{plan.footerNote}</p>
               </article>
             ))}
+
+            {/* Last item of the plan grid: full width under the three plans on
+                desktop, and on tablet it fills the empty slot left beside the
+                third plan when the grid drops to two columns. */}
+            <InfoListCard list={plansBenefits} className="planBenefitsCard" />
           </div>
 
           <h3 className="treatGroupHeading">{sessionsHeading}</h3>

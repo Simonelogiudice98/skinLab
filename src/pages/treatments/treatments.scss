@@ -314,6 +314,17 @@
   }
 }
 
+/* The benefits card is the fourth item of the three column plan grid, so it
+   spans the whole width on its own row. At two columns it takes the slot the
+   third plan leaves empty, and at one column it simply stacks last. */
+.planBenefitsCard {
+  grid-column: 1 / -1;
+
+  @media (max-width: 980px) {
+    grid-column: auto;
+  }
+}
+
 .sessionGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
