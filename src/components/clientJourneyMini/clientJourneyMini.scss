@@ -21,12 +21,51 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
 
+  /* Tablets in portrait keep the four steps on a single line, as the client
+     asked. Only the gap tightens here; the card itself slims down below. */
   @media (max-width: 1040px) {
+    gap: 10px;
+  }
+
+  @media (max-width: 700px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
   }
 
   @media (max-width: 620px) {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Between 700px and 1040px the four cards share a narrow row, so the padding
+   and type step down to keep the text readable. */
+@media (min-width: 701px) and (max-width: 1040px) {
+  .journeyMiniCard {
+    padding: 12px;
+  }
+
+  .journeyMiniIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .journeyMiniIconSvg {
+    font-size: 19px;
+  }
+
+  .journeyMiniTitle {
+    margin: 10px 0 8px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+  }
+
+  .journeyMiniDivider {
+    margin-bottom: 10px;
+  }
+
+  .journeyMiniDesc {
+    font-size: 12px;
+    line-height: 1.6;
   }
 }
 
