@@ -87,6 +87,7 @@
 .journeyMiniIcon {
   width: 44px;
   height: 44px;
+  margin: 0 auto;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -105,8 +106,9 @@
   font-weight: 800;
   letter-spacing: 0.7px;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.92); 
+  color: rgba(0, 0, 0, 0.92);
   line-height: 1.2;
+  text-align: center;
 }
 
 .journeyMiniDivider {
