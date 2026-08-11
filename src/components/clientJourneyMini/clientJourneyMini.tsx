@@ -79,8 +79,9 @@ const STEPS: Step[] = [
   },
 ];
 
-/* Orbit circle for the Circle membership card: a hand drawn ring left open at
-   the bottom, with a second stroke overshooting it, around three dots. */
+/* Orbit circle for the Circle membership card: a hand drawn ring broken by a
+   thin gap at the top left, with the stroke overshooting itself along the
+   bottom, around three stacked dots. */
 function OrbitCircleIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -92,18 +93,12 @@ function OrbitCircleIcon({ className }: { className?: string }) {
       stroke="currentColor"
       strokeLinecap="round"
     >
-      <path
-        d="M10.52 20.37 A 8.5 8.5 0 1 1 16.25 19.36"
-        strokeWidth="1.4"
-      />
-      <path
-        d="M2.94 10.4 A 9.2 9.2 0 0 1 8.85 3.35"
-        strokeWidth="1.1"
-      />
+      <path d="M9.13 4.11 A 8.4 8.4 0 1 1 7.18 5.12" strokeWidth="1.3" />
+      <path d="M12.78 20.96 A 9 9 0 0 1 4.21 16.5" strokeWidth="1" />
       <g fill="currentColor" stroke="none">
-        <circle cx="12" cy="8.8" r="1.1" />
-        <circle cx="12" cy="12" r="1.1" />
-        <circle cx="12" cy="15.2" r="1.1" />
+        <circle cx="12" cy="9.6" r="1.05" />
+        <circle cx="12" cy="12" r="1.05" />
+        <circle cx="12" cy="14.4" r="1.05" />
       </g>
     </svg>
   );
