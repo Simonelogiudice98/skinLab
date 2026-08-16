@@ -1,4 +1,33 @@
-import type { Concern, TreatmentsContent } from "../../interfaces/skinLab.types.ts";
+import type {
+  Concern,
+  PhilosophyPillar,
+  TreatmentsContent,
+} from "../../interfaces/skinLab.types.ts";
+
+export const philosophy: PhilosophyPillar[] = [
+  {
+    title: "Science.",
+    paragraphs: [
+      "We believe your skin deserves more than guesswork.",
+      "Our treatments are guided by clinical assessment and evidence based Mesoestetic protocols, with every treatment selected according to your individual skin and its needs.",
+    ],
+  },
+  {
+    title: "Care.",
+    paragraphs: [
+      "Your skin is not treated in isolation.",
+      "We take the time to understand your concerns, prepare your skin appropriately and support you throughout your treatment journey.",
+      "As your skin changes, your treatment plan can change with it.",
+    ],
+  },
+  {
+    title: "Results.",
+    paragraphs: [
+      "We focus on meaningful, progressive results rather than quick fixes.",
+      "Our aim is not simply to treat your skin today, but to help you build healthier skin and maintain your results through personalised treatment, appropriate homecare and ongoing clinical support.",
+    ],
+  },
+];
 
 export const concerns: Concern[] = [
   {

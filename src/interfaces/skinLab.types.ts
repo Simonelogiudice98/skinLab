@@ -98,6 +98,11 @@ export interface TreatmentsContent {
   membership: Membership;
 }
 
+export type PhilosophyPillar = {
+  title: string;
+  paragraphs: string[];
+};
+
 export interface SmartImageProps  {
  avif?: string;
   webp?: string;
