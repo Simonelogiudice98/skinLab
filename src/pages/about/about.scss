@@ -13,7 +13,7 @@
 .aboutCopy {
   p {
     margin: 0 0 16px;
-    color: rgba(42, 42, 42, 0.88);
+    color: var(--text-soft);
     line-height: 1.8;
     font-size: 15.5px;
   }
@@ -40,8 +40,8 @@
   overflow: hidden;
 
   border-radius: 18px;
-  border: 1px solid rgba(42, 42, 42, 0.12);
-  background: rgba(242, 241, 237, 0.6);
+  border: 1px solid var(--border-soft);
+  background: var(--surface);
 
   /* Fixed height, not an aspect ratio: the box fills the column width and the
      crop trims the wall above the founder's head. */
@@ -74,8 +74,8 @@
   }
 
   border-radius: 18px;
-  border: 1px solid rgba(42, 42, 42, 0.12);
-  background: #fff;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-raised);
   padding: 22px;
 }
 
@@ -84,7 +84,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(42, 42, 42, 0.45);
+  color: var(--text-faint);
   margin: 0;
 }
 
@@ -93,13 +93,13 @@
 
   & + .philosophyItem {
     margin-top: 16px;
-    border-top: 1px solid rgba(42, 42, 42, 0.1);
+    border-top: 1px solid var(--border-soft);
   }
 
   p {
     margin: 0 0 8px;
     font-size: 13px;
-    color: rgba(42, 42, 42, 0.6);
+    color: var(--text-faint);
     line-height: 1.65;
   }
 
@@ -114,5 +114,5 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  color: rgba(42, 42, 42, 0.85);
+  color: var(--text);
 }

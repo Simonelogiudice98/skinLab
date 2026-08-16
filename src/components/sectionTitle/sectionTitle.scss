@@ -23,7 +23,7 @@
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.2px;
-    color: rgba(42, 42, 42, 0.9);
+    color: var(--text);
   }
 }
 
@@ -37,7 +37,7 @@
 .sub {
   margin: 0;
   max-width: 70ch;
-  color: rgba(42, 42, 42, 0.72);
+  color: var(--text-soft);
   font-size: 14px;
   line-height: 1.7;
 }

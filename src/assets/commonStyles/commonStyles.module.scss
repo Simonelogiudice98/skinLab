@@ -1,14 +1,4 @@
 .page {
-  --bg: #e7dcd6;
-  --surface: #f2f1ed;
-  --surface2: #eceae5;
-  --text: #2a2a2a;
-  --muted: #6a6a68;
-  --border: rgba(42, 42, 42, 0.14);
-
-  --accent: #b79e7a;
-  --accentSoft: rgba(183, 158, 122, 0.18);
-
   background: var(--bg);
   color: var(--text);
   min-height: 100vh;
@@ -44,7 +34,7 @@
   font-size: 11px;
   letter-spacing: 6px;
   text-transform: uppercase;
-  color: rgba(42, 42, 42, 0.7);
+  color: var(--text-soft);
 }
 
 
@@ -55,16 +45,16 @@
   height: 30px;
   padding: 0 14px;
   border-radius: 999px;
-  background-color: #56555d;
-  border: 1px solid rgba(42, 42, 42, 0.16);
-  color: #f7eee5;
+  background-color: var(--coffee);
+  border: 1px solid var(--border);
+  color: var(--eggshell);
   font-size: 12px;
   font-weight: 600;
 }
 .pillLight {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: #56555d;
-  color: #B8860B !important;
+  background: transparent;
+  border-color: var(--stone);
+  color: var(--accent-deep) !important;
 }
 
 .section {
@@ -74,16 +64,16 @@
 
 .panel {
   border-radius: 22px;
-  border: 1px solid rgba(42, 42, 42, 0.14);
-  background: #e8e0d8;
+  border: 1px solid var(--border);
+  background: var(--surface);
   padding: 28px;
-  box-shadow: 0 24px 70px rgba(42, 42, 42, 0.1);
+  box-shadow: 0 24px 70px var(--shadow);
 }
 
 .card {
   border-radius: 18px;
-  border: 1px solid rgba(42, 42, 42, 0.12);
-  background: #f7eee5;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-raised);
   padding: 18px;
 }
 
@@ -97,14 +87,14 @@
   font-size: 12px;
   letter-spacing: 0.4px;
   text-transform: uppercase;
-  color: rgba(42, 42, 42, 0.6);
+  color: var(--text-faint);
   font-weight: 800;
 }
 
 .list {
   margin: 10px 0 0;
   padding-left: 18px;
-  color: rgba(42, 42, 42, 0.78);
+  color: var(--text-soft);
   line-height: 1.7;
   font-size: 14px;
 
@@ -115,16 +105,16 @@
 
 .btnPrimary {
   text-decoration: none;
-  color: #1e1e1e;
-  background: linear-gradient(180deg, rgba(183, 158, 122, 0.95), rgba(183, 158, 122, 0.78));
-  border: 1px solid rgba(42, 42, 42, 0.18);
+  color: var(--accent-ink);
+  background: var(--accent-deep);
+  border: 1px solid var(--border);
   padding: 12px 16px;
   border-radius: 999px;
   font-weight: 800;
   font-size: 13px;
-  box-shadow: 0 18px 40px rgba(42, 42, 42, 0.14);
+  box-shadow: 0 18px 40px var(--shadow);
 
   &:hover {
-    filter: brightness(1.02);
+    background: #5c5d45;
   }
 }
